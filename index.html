@@ -388,7 +388,7 @@
                         clip: rect(0 0 0 0); white-space: nowrap;
                     }
 
-                    /* ---- Hero: viewfinder + light leak ---- */
+                    /* ---- Hero ---- */
                     .mil-banner { position: relative; overflow: hidden; }
 
                     .hp-leak {
@@ -396,144 +396,74 @@
                         top: -25%;
                         right: -12%;
                         z-index: 1;
-                        width: 62vw;
-                        height: 62vw;
-                        max-width: 950px;
-                        max-height: 950px;
+                        width: 60vw;
+                        height: 60vw;
+                        max-width: 900px;
+                        max-height: 900px;
                         border-radius: 50%;
-                        background: radial-gradient(circle, rgba(255,152,0,.30) 0%, rgba(255,72,0,.14) 38%, transparent 70%);
+                        background: radial-gradient(circle, rgba(255,152,0,.18) 0%, rgba(255,72,0,.07) 40%, transparent 70%);
                         filter: blur(30px);
                         mix-blend-mode: screen;
                         pointer-events: none;
-                        animation: hp-leak 14s ease-in-out infinite alternate;
+                        animation: hp-leak 16s ease-in-out infinite alternate;
                     }
 
-                    .hp-vf {
-                        position: absolute;
-                        inset: 40px 180px;
-                        z-index: 2;
-                        color: rgba(255,255,255,.55);
-                        font-family: var(--hp-mono);
+                    .hp-kicker {
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        margin: 0 0 28px;
+                        color: rgba(255,255,255,.6);
                         font-size: 12px;
-                        letter-spacing: .14em;
+                        font-weight: 500;
+                        letter-spacing: .3em;
                         text-transform: uppercase;
-                        pointer-events: none;
-                        background:
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top left / 46px 2px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top left / 2px 46px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top right / 46px 2px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top right / 2px 46px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom left / 46px 2px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom left / 2px 46px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom right / 46px 2px no-repeat,
-                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom right / 2px 46px no-repeat;
                     }
-                    /* rule-of-thirds guides */
-                    .hp-vf::before {
-                        position: absolute;
-                        inset: 0;
-                        background:
-                            linear-gradient(to right, transparent calc(33.33% - .5px), rgba(255,255,255,.05) 33.33%, transparent calc(33.33% + .5px)),
-                            linear-gradient(to right, transparent calc(66.66% - .5px), rgba(255,255,255,.05) 66.66%, transparent calc(66.66% + .5px)),
-                            linear-gradient(to bottom, transparent calc(33.33% - .5px), rgba(255,255,255,.05) 33.33%, transparent calc(33.33% + .5px)),
-                            linear-gradient(to bottom, transparent calc(66.66% - .5px), rgba(255,255,255,.05) 66.66%, transparent calc(66.66% + .5px));
+                    .hp-kicker::before {
+                        width: 40px;
+                        height: 1px;
+                        background: var(--hp-accent);
                         content: "";
                     }
-                    .hp-vf-top {
-                        position: absolute;
-                        top: 14px;
-                        left: 50%;
-                        display: flex;
-                        gap: 30px;
-                        align-items: center;
-                        transform: translateX(-50%);
-                        white-space: nowrap;
-                    }
-                    .hp-vf-bottom {
-                        position: absolute;
-                        left: 66px;
-                        right: 66px;
-                        bottom: 14px;
-                        display: flex;
-                        justify-content: space-between;
-                        white-space: nowrap;
-                    }
-                    .hp-vf-bottom b { color: var(--hp-accent); font-weight: 400; }
-
-                    .hp-rec { display: inline-flex; align-items: center; gap: 8px; color: #fff; }
-                    .hp-rec::before,
-                    .hp-chip::before {
-                        width: 9px;
-                        height: 9px;
+                    .hp-kicker i {
+                        width: 4px;
+                        height: 4px;
                         border-radius: 50%;
-                        background: #ff3b30;
-                        box-shadow: 0 0 9px rgba(255,59,48,.8);
-                        content: "";
-                        animation: hp-blink 1.2s steps(2, start) infinite;
-                    }
-                    .hp-battery {
-                        position: relative;
-                        width: 26px;
-                        height: 12px;
-                        border: 1.5px solid currentColor;
-                        border-radius: 2px;
-                        padding: 1.5px;
-                    }
-                    .hp-battery::before { display: block; width: 70%; height: 100%; background: currentColor; content: ""; }
-                    .hp-battery::after {
-                        position: absolute; top: 3px; right: -5px;
-                        width: 3px; height: 4px; background: currentColor; content: "";
+                        background: var(--hp-accent);
                     }
 
-                    /* Autofocus brackets around the CHAYAMANA logo */
-                    .hp-focus {
-                        position: relative;
-                        display: inline-block;
-                        margin: 20px 0 10px -26px;
-                        padding: 20px 26px;
-                        background:
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 28px 2px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 2px 28px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 28px 2px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 2px 28px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 28px 2px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 2px 28px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 28px 2px no-repeat,
-                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 2px 28px no-repeat;
+                    .hp-h1 { margin: 0 0 34px; line-height: 0; }
+                    .hp-h1 img { max-width: 100%; height: auto; }
+
+                    /* Event information bar */
+                    .hp-meta {
+                        display: flex;
+                        max-width: 780px;
+                        margin-top: 56px;
+                        padding-top: 28px;
+                        border-top: 1px solid rgba(255,255,255,.12);
                     }
-                    .hp-focus .hp-h1 { margin: 0; line-height: 0; }
-                    .hp-focus .hp-h1 img { max-width: 100%; height: auto; }
-                    .hp-focus-tag {
-                        position: absolute;
-                        right: 26px;
-                        bottom: -24px;
-                        color: var(--hp-accent);
-                        font-family: var(--hp-mono);
+                    .hp-meta > div {
+                        padding: 0 40px;
+                        border-left: 1px solid rgba(255,255,255,.12);
+                    }
+                    .hp-meta > div:first-child { padding-left: 0; border-left: 0; }
+                    .hp-meta span {
+                        display: block;
+                        margin-bottom: 10px;
+                        color: rgba(255,255,255,.45);
                         font-size: 11px;
-                        letter-spacing: .2em;
-                        line-height: 1;
-                    }
-
-                    /* "Next shoot" countdown chip */
-                    .hp-chip {
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 12px;
-                        margin-top: 34px;
-                        padding: 11px 20px;
-                        border: 1px solid rgba(255,255,255,.22);
-                        border-radius: 999px;
-                        color: rgba(255,255,255,.78);
-                        font-family: var(--hp-mono);
-                        font-size: 12px;
-                        letter-spacing: .14em;
-                        text-decoration: none;
+                        font-weight: 500;
+                        letter-spacing: .22em;
                         text-transform: uppercase;
-                        transition: border-color .3s, color .3s;
                     }
-                    .hp-chip b { color: var(--hp-accent); font-weight: 700; }
-                    .hp-chip:hover,
-                    .hp-chip:focus-visible { border-color: var(--hp-accent); color: #fff; }
+                    .hp-meta b {
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: .02em;
+                    }
+                    .hp-meta b.hp-accent { color: var(--hp-accent); }
 
                     /* ---- Section eyebrows: "Frame 01, 02..." ---- */
                     .hp-eyebrow {
@@ -684,18 +614,14 @@
                     @keyframes hp-blink { to { visibility: hidden; } }
                     @keyframes hp-marquee { to { transform: translateX(-50%); } }
 
-                    @media (max-width: 1200px) {
-                        .hp-vf { display: none; }
-                    }
                     @media (max-width: 768px) {
-                        .hp-focus { margin-left: -14px; padding: 14px; }
-                        .hp-focus-tag { right: 14px; }
-                        .hp-chip { font-size: 10px; gap: 8px; padding: 10px 14px; }
+                        .hp-meta { flex-wrap: wrap; row-gap: 22px; margin-top: 40px; }
+                        .hp-meta > div { width: 50%; padding: 0; border-left: 0; }
                         .hp-film-track span { font-size: 15px; padding: 0 16px; }
                         .hp-print { transform: rotate(-1.5deg); }
                     }
                     @media (prefers-reduced-motion: reduce) {
-                        .hp-leak, .hp-film-track, .hp-rec::before, .hp-chip::before { animation: none; }
+                        .hp-leak, .hp-film-track { animation: none; }
                     }
                 </style>
 
@@ -712,13 +638,11 @@
 
                         <div class="container">
                             <div class="mil-banner-content mil-up">
-                                <div class="hp-focus">
-                                    <h1 class="hp-h1">
-                                        <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
-                                        <span class="hp-sr">CHAYAMANA – photography exhibition and competition by MCPAS, Mahanama College Photographic Art Society</span>
-                                    </h1>
-                                    <span class="hp-focus-tag">AF · LOCKED</span>
-                                </div>
+                                <p class="hp-kicker">MCPAS presents <i></i> 2026 Edition</p>
+                                <h1 class="hp-h1">
+                                    <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
+                                    <span class="hp-sr">CHAYAMANA – photography exhibition and competition by MCPAS, Mahanama College Photographic Art Society</span>
+                                </h1>
                                 <h3 class="mil-muted mil-mb-60">About <span class="mil-thin">CHAYAMANA</span></h3>
                                 <div class="row">
                                     <div class="col-md-12 col-lg-8">
@@ -735,9 +659,11 @@
                                     </a>
                                 </div>
 
-                                <a href="physical-competition.html" data-no-swup class="hp-chip">
-                                    Next shoot · <b>Physical Competition</b> · Dec 05 2026<span id="hp-days"></span>
-                                </a>
+                                <div class="hp-meta">
+                                    <div><span>Physical Competition</span><b>05 Dec 2026</b></div>
+                                    <div><span>Countdown</span><b class="hp-accent" id="hp-days">Coming soon</b></div>
+                                    <div><span>Organized by</span><b>MCPAS</b></div>
+                                </div>
 
                                 <a href="#rules" data-no-swup data-native-anchor class="mil-circle-text" aria-label="Scroll to Rules and Regulations">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
@@ -759,19 +685,8 @@
                         </div>
                     </div>
 
-                    <!-- light leak + camera viewfinder overlay -->
+                    <!-- soft light leak -->
                     <div class="hp-leak" aria-hidden="true"></div>
-                    <div class="hp-vf" aria-hidden="true">
-                        <div class="hp-vf-top">
-                            <span class="hp-rec">REC</span>
-                            <span>CHAYAMANA 2026</span>
-                            <span class="hp-battery"></span>
-                        </div>
-                        <div class="hp-vf-bottom">
-                            <span><b>f/</b>2.8 &nbsp;·&nbsp; 1/250s &nbsp;·&nbsp; ISO 400</span>
-                            <span>[ AF ] &nbsp;·&nbsp; RAW</span>
-                        </div>
-                    </div>
                 </section>
                 <!-- banner end -->
 
@@ -1252,7 +1167,7 @@
             var el = document.getElementById('hp-days');
             if (!el) return;
             var d = Math.ceil((new Date(2026, 11, 5) - new Date()) / 86400000);
-            el.textContent = d > 1 ? ' · ' + d + ' days to go' : d === 1 ? ' · tomorrow' : d === 0 ? ' · today' : '';
+            el.textContent = d > 1 ? d + ' days to go' : d === 1 ? 'Tomorrow' : d === 0 ? 'Today' : 'Concluded';
         }
         document.addEventListener('DOMContentLoaded', hpDays);
         document.addEventListener('swup:contentReplaced', hpDays);

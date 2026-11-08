@@ -607,6 +607,26 @@
                         letter-spacing: .1em;
                     }
 
+                    /* ---- Hero spacing ---- */
+                    .mil-banner { height: auto !important; min-height: 100vh; }
+                    .mil-banner > .mi-invert-fix,
+                    .mil-banner .container { height: auto !important; min-height: 100vh; }
+                    .mil-banner .container { display: flex; align-items: center; }
+                    .mil-banner .mil-banner-content { width: 100%; padding: 190px 0 120px !important; }
+                    .mil-banner .hp-kicker { margin-bottom: 36px; }
+                    .mil-banner .hp-h1 { margin-bottom: 56px; }
+                    .mil-banner .mil-banner-content h3 { margin-bottom: 40px !important; }
+                    .mil-banner .mil-banner-content p.mil-light-soft {
+                        margin-bottom: 60px !important;
+                        line-height: 1.85;
+                    }
+                    .mil-banner .hp-meta { margin-top: 72px; }
+                    @media (max-width: 768px) {
+                        .mil-banner .mil-banner-content { padding: 140px 0 90px !important; }
+                        .mil-banner .hp-h1 { margin-bottom: 40px; }
+                        .mil-banner .mil-banner-content p.mil-light-soft { margin-bottom: 44px !important; }
+                    }
+
                     @keyframes hp-leak {
                         from { transform: translate(0, 0) scale(1); opacity: .7; }
                         to   { transform: translate(-8vw, 6vh) scale(1.15); opacity: 1; }

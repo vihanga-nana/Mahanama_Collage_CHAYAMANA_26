@@ -1194,6 +1194,131 @@
     })();
     </script>
 
+    <!-- camera shutter at the end of the preloader -->
+    <script>
+    (function () {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        var NS = 'http://www.w3.org/2000/svg';
+        var R_MAX = 340, BLADES = 6;
+        var started = false;
+
+        function build() {
+            var wrap = document.createElement('div');
+            wrap.setAttribute('aria-hidden', 'true');
+            wrap.style.cssText = 'position:fixed;inset:0;z-index:100000;pointer-events:none;';
+
+            var svg = document.createElementNS(NS, 'svg');
+            svg.setAttribute('viewBox', '-100 -100 200 200');
+            svg.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+            svg.style.cssText = 'width:100%;height:100%;display:block;';
+
+            var blades = document.createElementNS(NS, 'path');
+            blades.setAttribute('fill', '#0b0b0b');
+            blades.setAttribute('fill-rule', 'evenodd');
+
+            var seams = document.createElementNS(NS, 'path');
+            seams.setAttribute('fill', 'none');
+            seams.setAttribute('stroke', 'rgba(255,255,255,.16)');
+            seams.setAttribute('stroke-width', '.6');
+
+            var edge = document.createElementNS(NS, 'path');
+            edge.setAttribute('fill', 'none');
+            edge.setAttribute('stroke', '#ff9800');
+            edge.setAttribute('stroke-width', '.8');
+            edge.setAttribute('stroke-opacity', '.7');
+
+            svg.appendChild(blades); svg.appendChild(seams); svg.appendChild(edge);
+
+            var flash = document.createElement('div');
+            flash.style.cssText = 'position:absolute;inset:0;background:#fff;opacity:0;';
+
+            wrap.appendChild(svg); wrap.appendChild(flash);
+            document.body.appendChild(wrap);
+            return { wrap: wrap, blades: blades, seams: seams, edge: edge, flash: flash };
+        }
+
+        function draw(el, r, rot) {
+            var v = [], i;
+            for (i = 0; i < BLADES; i++) {
+                var a = (rot + i * 360 / BLADES) * Math.PI / 180;
+                v.push([r * Math.cos(a), r * Math.sin(a)]);
+            }
+            var hex = 'M' + v.map(function (p) { return p[0].toFixed(2) + ' ' + p[1].toFixed(2); }).join('L') + 'Z';
+            el.blades.setAttribute('d', 'M-1000 -1000H1000V1000H-1000Z' + hex);
+            el.edge.setAttribute('d', r > 0.5 ? hex : '');
+            var seams = '';
+            for (i = 0; i < BLADES; i++) {
+                var a1 = v[i], a2 = v[(i + 1) % BLADES];
+                var dx = a1[0] - a2[0], dy = a1[1] - a2[1];
+                var len = Math.sqrt(dx * dx + dy * dy) || 1;
+                seams += 'M' + a1[0].toFixed(2) + ' ' + a1[1].toFixed(2) +
+                         'L' + (a1[0] + dx / len * 1200).toFixed(2) + ' ' + (a1[1] + dy / len * 1200).toFixed(2);
+            }
+            el.seams.setAttribute('d', seams);
+        }
+
+        function tween(ms, ease, step, done) {
+            var t0 = null;
+            function frame(t) {
+                if (t0 === null) t0 = t;
+                var k = Math.min((t - t0) / ms, 1);
+                step(ease(k));
+                if (k < 1) requestAnimationFrame(frame); else if (done) done();
+            }
+            requestAnimationFrame(frame);
+        }
+        function easeIn(k) { return k * k * k; }
+        function easeOut(k) { return 1 - Math.pow(1 - k, 3); }
+
+        function shutter(preloader) {
+            if (started) return;
+            started = true;
+            var el = build();
+            draw(el, R_MAX, 0);
+
+            // close
+            tween(380, easeIn, function (k) {
+                draw(el, R_MAX * (1 - k), 60 * k);
+            }, function () {
+                if (preloader) preloader.style.visibility = 'hidden';
+                setTimeout(function () {
+                    // flash + open
+                    el.flash.style.transition = 'opacity .55s ease-out';
+                    el.flash.style.opacity = '.55';
+                    requestAnimationFrame(function () {
+                        requestAnimationFrame(function () { el.flash.style.opacity = '0'; });
+                    });
+                    tween(650, easeOut, function (k) {
+                        draw(el, R_MAX * k, 60 + 60 * k);
+                    }, function () {
+                        el.wrap.parentNode && el.wrap.parentNode.removeChild(el.wrap);
+                    });
+                }, 160);
+            });
+        }
+
+        function watch() {
+            var pre = document.querySelector('.mil-preloader');
+            if (!pre) return;
+            var waited = 0;
+            var poll = setInterval(function () {
+                waited += 40;
+                var hidden = pre.classList.contains('mil-hidden');
+                var op = parseFloat(window.getComputedStyle(pre).opacity);
+                if (hidden || op < 0.97) {
+                    clearInterval(poll);
+                    if (!hidden) shutter(pre);
+                }
+                if (waited > 15000) clearInterval(poll);
+            }, 40);
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch);
+        else watch();
+    })();
+    </script>
+
 </body>
 
 </html>

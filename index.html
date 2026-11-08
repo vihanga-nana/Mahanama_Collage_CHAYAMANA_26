@@ -1194,38 +1194,84 @@
     })();
     </script>
 
-    <!-- camera flash at the end of the preloader -->
+    <!-- camera flash + "photo captured" animation at the end of the preloader -->
     <script>
     (function () {
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
         var started = false;
 
-        function flash(preloader) {
+        // "developing photo" effect for the hero text
+        var css = document.createElement('style');
+        css.textContent =
+            '@keyframes hp-develop{0%{filter:brightness(2.4) contrast(.55) blur(8px)}60%{filter:brightness(1.25) contrast(.9) blur(1.5px)}100%{filter:none}}' +
+            '.hp-developing .mil-banner .mil-banner-content{animation:hp-develop 1.8s cubic-bezier(.2,.6,.3,1) both}';
+        document.head.appendChild(css);
+
+        function flash(pre) {
             if (started) return;
             started = true;
 
+            // white flash layer
             var f = document.createElement('div');
             f.setAttribute('aria-hidden', 'true');
-            f.style.cssText = 'position:fixed;inset:0;z-index:100000;pointer-events:none;opacity:0;' +
-                'background:radial-gradient(circle at 50% 45%, #ffffff 0%, #ffffff 45%, #fff6e6 100%);';
+            f.style.cssText = 'position:fixed;inset:0;z-index:100001;pointer-events:none;opacity:0;' +
+                'background:radial-gradient(circle at 50% 45%,#fff 0%,#fff 45%,#fff6e6 100%);';
             document.body.appendChild(f);
-
             function set(op, ms, ease) {
                 f.style.transition = ms ? 'opacity ' + ms + 'ms ' + (ease || 'linear') : 'none';
                 f.style.opacity = op;
             }
 
-            // pre-flash (like a real camera)
+            // pre-flash
             set(0.55, 0);
             setTimeout(function () { set(0, 90); }, 50);
 
-            // main flash
+            // main flash + capture
             setTimeout(function () {
                 set(1, 0);
-                if (preloader) preloader.style.visibility = 'hidden';
+
+                // the "captured photo": a copy of the loading screen
+                var snap = document.createElement('div');
+                snap.setAttribute('aria-hidden', 'true');
+                snap.style.cssText = 'position:fixed;inset:0;z-index:100000;pointer-events:none;background:#fff;' +
+                    'box-shadow:0 30px 80px rgba(0,0,0,.55);transform-origin:50% 50%;';
+                var img = document.createElement('div');
+                img.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;' +
+                    'background-color:#000;background-size:cover;background-position:center;';
+                img.style.backgroundImage = (pre && pre.style.backgroundImage) || 'none';
+                var logo = document.createElement('img');
+                logo.src = 'Pics/chayamana logo.png';
+                logo.alt = '';
+                logo.style.cssText = 'width:min(500px,70vw);height:auto;';
+                img.appendChild(logo);
+                snap.appendChild(img);
+                document.body.appendChild(snap);
+                if (pre) pre.style.visibility = 'hidden';
+
                 setTimeout(function () {
+                    // flash fades, hero develops, photo shrinks into a print
                     set(0, 900, 'cubic-bezier(.2,.6,.3,1)');
-                    setTimeout(function () { f.parentNode && f.parentNode.removeChild(f); }, 950);
+                    document.body.classList.add('hp-developing');
+
+                    var small = window.innerWidth < 700;
+                    var shrink = snap.animate([
+                        { transform: 'translate(0,0) scale(1) rotate(0deg)', padding: '0px', borderRadius: '0px' },
+                        { transform: (small ? 'translate(22vw,30vh) scale(.36)' : 'translate(33vw,30vh) scale(.24)') + ' rotate(-7deg)',
+                          padding: small ? '22px 22px 80px' : '36px 36px 130px', borderRadius: '6px' }
+                    ], { duration: 950, easing: 'cubic-bezier(.65,0,.25,1)', fill: 'forwards' });
+
+                    shrink.onfinish = function () {
+                        setTimeout(function () {
+                            var out = snap.animate([
+                                { opacity: 1 },
+                                { transform: (small ? 'translate(22vw,85vh) scale(.36)' : 'translate(33vw,80vh) scale(.24)') + ' rotate(-14deg)', opacity: 0 }
+                            ], { duration: 650, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'forwards' });
+                            out.onfinish = function () {
+                                snap.remove(); f.remove();
+                                setTimeout(function () { document.body.classList.remove('hp-developing'); }, 900);
+                            };
+                        }, 700);
+                    };
                 }, 120);
             }, 260);
         }

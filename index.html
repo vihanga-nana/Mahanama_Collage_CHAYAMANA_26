@@ -17,24 +17,47 @@
     <link rel="stylesheet" href="css/plugins/fancybox.min.css">
     <!-- ashley scss -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- page name -->
 
-    <title>CHAYAMANA</title>
+    <!-- page name + SEO -->
+    <title>CHAYAMANA 2026 | MCPAS – Mahanama College Photographic Art Society</title>
     <link rel="icon" type="image/png" href="Pics/IMG_8922.PNG">
-    <title>chayamana | MCPAS – Mahanama College Photographic Art Society</title>
-<meta name="description" content="CHAYAMANA is the annual inter-school photography exhibition and competition organized by MCPAS, the Mahanama College Photographic Art Society, Colombo, Sri Lanka.">
-<link rel="canonical" href="https://mcpas.mcmu.lk/">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Mahanama College Photographic Art Society (MCPAS)",
-  "alternateName": ["MCPAS", "CHAYAMANA"],
-  "url": "https://mcpas.mcmu.lk/",
-  "logo": "https://mcpas.mcmu.lk/Pics/chayamana%20logo.png",
-  "sameAs": ["<Facebook page URL>", "<Instagram URL>"]
-}
-</script>
+    <meta name="description" content="CHAYAMANA is the annual inter-school photography exhibition and competition organized by MCPAS, the Mahanama College Photographic Art Society, Colombo, Sri Lanka.">
+    <link rel="canonical" href="https://mcpas.mcmu.lk/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcpas.mcmu.lk/">
+    <meta property="og:title" content="CHAYAMANA 2026 | MCPAS – Mahanama College Photographic Art Society">
+    <meta property="og:description" content="The annual inter-school photography exhibition and competition by MCPAS, Mahanama College, Colombo.">
+    <meta property="og:image" content="https://mcpas.mcmu.lk/Pics/chayamana%20logo.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://mcpas.mcmu.lk/#org",
+          "name": "Mahanama College Photographic Art Society (MCPAS)",
+          "alternateName": ["MCPAS", "CHAYAMANA"],
+          "url": "https://mcpas.mcmu.lk/",
+          "logo": "https://mcpas.mcmu.lk/Pics/chayamana%20logo.png",
+          "sameAs": ["https://www.instagram.com/mcpas.official/"]
+        },
+        {
+          "@type": "Event",
+          "name": "CHAYAMANA 2026 – Physical Competition",
+          "startDate": "2026-12-05",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Mahanama College",
+            "address": "Colombo 03, Sri Lanka"
+          },
+          "organizer": { "@id": "https://mcpas.mcmu.lk/#org" },
+          "url": "https://mcpas.mcmu.lk/physical-competition.html"
+        }
+      ]
+    }
+    </script>
 
 <style>
 .mil-preloader-animation .mil-animation-1 {
@@ -105,17 +128,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    
 }
-/* Small circular avatar above testimonial text, aligned left */
+
+/* EXCO avatar styled as a camera lens */
 .mil-review-avatar {
     width: 110px;
     height: 110px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 20px auto;
-    border: 2px solid #fff;
+    margin: 18px auto 38px auto;
+    box-shadow:
+        0 0 0 4px #111,
+        0 0 0 6px #ff9800,
+        0 0 0 13px #1b1b1b,
+        0 0 0 14px rgba(0, 0, 0, .25),
+        0 14px 30px rgba(0, 0, 0, .25);
 }
 
 .mil-review-avatar img {
@@ -190,7 +217,6 @@
     max-height: 70px;
     object-fit: contain;
 }
-
 </style>
 </head>
 
@@ -212,25 +238,21 @@
         <!-- cursor end -->
 
         <!-- preloader -->
-<div class="mil-preloader" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('New folder/FB_IMG_1783052125417.jpg.jpeg'); background-size: cover; background-position: center;">            
-    <div class="mil-preloader-animation">
+        <div class="mil-preloader" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('New folder/FB_IMG_1783052125417.jpg.jpeg'); background-size: cover; background-position: center;">
+            <div class="mil-preloader-animation">
                 <div class="mil-pos-abs mil-animation-1">
-                    <p class="mil-h3 mil-muted"><B>Light.</B></p>
-                    <p class="mil-h3 mil-muted mil-thin">Vision
-                        .</p>
-                    <p class="mil-h3 mil-muted"><B>Expression.</B></p>
+                    <p class="mil-h3 mil-muted"><b>Light.</b></p>
+                    <p class="mil-h3 mil-muted mil-thin">Vision.</p>
+                    <p class="mil-h3 mil-muted"><b>Expression.</b></p>
                 </div>
- <div class="mil-pos-abs mil-animation-2">
+                <div class="mil-pos-abs mil-animation-2">
                     <div class="mil-reveal-frame">
                         <p class="mil-reveal-box"></p>
-                        <img src="Pics/chayamana logo.png" width="500" height="125" alt="description">
-
+                        <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
                     </div>
                 </div>
-
             </div>
         </div>
-
         <!-- preloader end -->
 
         <!-- scrollbar progress -->
@@ -243,7 +265,7 @@
         <div class="mil-menu-frame">
             <!-- frame clone -->
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo"><img loading="lazy" src="Pics/IMG_8922.PNG" alt="Logo" style="height: 40px; width: auto;"></a>
+                <a href="index.html" class="mil-logo"><img loading="lazy" src="Pics/IMG_8922.PNG" alt="MCPAS logo" style="height: 40px; width: auto;"></a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -259,21 +281,22 @@
                                     <li class="mil-has-children mil-active">
                                         <a href="#.">Homepage</a>
                                         <ul>
-                                            <li><a href="index.html">Landing page</a></li>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="physical-competition.html" data-no-swup>Physical Competition</a></li>
                                         </ul>
                                     </li>
                                     <li class="mil-has-children">
-                                     <a href="#.">Legacy Of CHAYAMANA</a>
-                                    <ul>
-                                    <li><a href="portfolio-1.html">Grid type 1</a></li>
-                                    </ul>
+                                        <a href="#.">Legacy Of CHAYAMANA</a>
+                                        <ul>
+                                            <li><a href="portfolio-1.html">Past Exhibitions</a></li>
+                                        </ul>
                                     </li>
                                     <li class="mil-has-children">
-                                  <a href="#.">Rules And Regulations</a>
+                                        <a href="#.">Rules And Regulations</a>
                                         <ul>
-                                  <li><a data-no-swup href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener">View PDF</a></li>
-                                </ul>
-                                </li>
+                                            <li><a data-no-swup href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener">View PDF</a></li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </nav>
 
@@ -294,13 +317,12 @@
 
                                             <ul class="mil-menu-list">
                                                 <li><a href="portfolio-1.html" class="mil-light-soft">Legacy Of CHAYAMANA</a></li>
-                                                            <li><a href="physical-competition.html" class="mil-light-soft">Physical Competition</a></li>
-                                                            <li><a href="#rules" class="mil-light-soft">Submission</a></li>
-                                                            <li><a href="Yellow and Grey Modern Clean Company Project Proposal.pdf" class="mil-light-soft" target="_blank" rel="noopener">Rules and Regulations</a></li>
+                                                <li><a href="physical-competition.html" data-no-swup class="mil-light-soft">Physical Competition</a></li>
+                                                <li><a href="#rules" class="mil-light-soft">Submission</a></li>
+                                                <li><a href="Yellow and Grey Modern Clean Company Project Proposal.pdf" data-no-swup class="mil-light-soft" target="_blank" rel="noopener">Rules and Regulations</a></li>
                                             </ul>
 
                                         </div>
-                                       
                                     </div>
                                     <div class="mil-divider mil-mb-60"></div>
                                     <div class="row justify-content-between">
@@ -329,7 +351,7 @@
             </div>
         </div>
         <!-- menu -->
-        
+
         <!-- curtain -->
         <div class="mil-curtain"></div>
         <!-- curtain end -->
@@ -337,7 +359,7 @@
         <!-- frame -->
         <div class="mil-frame">
             <div class="mil-frame-top">
-                <a href="index.html" class="mil-logo"><img src="Pics/IMG_8922.PNG" alt="Logo" style="height: 40px; width: auto;"></a>
+                <a href="index.html" class="mil-logo"><img src="Pics/IMG_8922.PNG" alt="MCPAS logo" style="height: 40px; width: auto;"></a>
                 <div class="mil-menu-btn">
                     <span></span>
                 </div>
@@ -357,6 +379,326 @@
         <div class="mil-content">
             <div id="swupMain" class="mil-main-transition">
 
+                <!-- ============ Photography theme (kept inside swupMain so it loads with page transitions) ============ -->
+                <style>
+                    :root { --hp-accent: #ff9800; --hp-mono: "Courier New", ui-monospace, monospace; }
+
+                    .hp-sr {
+                        position: absolute; width: 1px; height: 1px; overflow: hidden;
+                        clip: rect(0 0 0 0); white-space: nowrap;
+                    }
+
+                    /* ---- Hero: viewfinder + light leak ---- */
+                    .mil-banner { position: relative; overflow: hidden; }
+
+                    .hp-leak {
+                        position: absolute;
+                        top: -25%;
+                        right: -12%;
+                        z-index: 1;
+                        width: 62vw;
+                        height: 62vw;
+                        max-width: 950px;
+                        max-height: 950px;
+                        border-radius: 50%;
+                        background: radial-gradient(circle, rgba(255,152,0,.30) 0%, rgba(255,72,0,.14) 38%, transparent 70%);
+                        filter: blur(30px);
+                        mix-blend-mode: screen;
+                        pointer-events: none;
+                        animation: hp-leak 14s ease-in-out infinite alternate;
+                    }
+
+                    .hp-vf {
+                        position: absolute;
+                        inset: 40px 180px;
+                        z-index: 2;
+                        color: rgba(255,255,255,.55);
+                        font-family: var(--hp-mono);
+                        font-size: 12px;
+                        letter-spacing: .14em;
+                        text-transform: uppercase;
+                        pointer-events: none;
+                        background:
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top left / 46px 2px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top left / 2px 46px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top right / 46px 2px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) top right / 2px 46px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom left / 46px 2px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom left / 2px 46px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom right / 46px 2px no-repeat,
+                            linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)) bottom right / 2px 46px no-repeat;
+                    }
+                    /* rule-of-thirds guides */
+                    .hp-vf::before {
+                        position: absolute;
+                        inset: 0;
+                        background:
+                            linear-gradient(to right, transparent calc(33.33% - .5px), rgba(255,255,255,.05) 33.33%, transparent calc(33.33% + .5px)),
+                            linear-gradient(to right, transparent calc(66.66% - .5px), rgba(255,255,255,.05) 66.66%, transparent calc(66.66% + .5px)),
+                            linear-gradient(to bottom, transparent calc(33.33% - .5px), rgba(255,255,255,.05) 33.33%, transparent calc(33.33% + .5px)),
+                            linear-gradient(to bottom, transparent calc(66.66% - .5px), rgba(255,255,255,.05) 66.66%, transparent calc(66.66% + .5px));
+                        content: "";
+                    }
+                    .hp-vf-top {
+                        position: absolute;
+                        top: 14px;
+                        left: 50%;
+                        display: flex;
+                        gap: 30px;
+                        align-items: center;
+                        transform: translateX(-50%);
+                        white-space: nowrap;
+                    }
+                    .hp-vf-bottom {
+                        position: absolute;
+                        left: 66px;
+                        right: 66px;
+                        bottom: 14px;
+                        display: flex;
+                        justify-content: space-between;
+                        white-space: nowrap;
+                    }
+                    .hp-vf-bottom b { color: var(--hp-accent); font-weight: 400; }
+
+                    .hp-rec { display: inline-flex; align-items: center; gap: 8px; color: #fff; }
+                    .hp-rec::before,
+                    .hp-chip::before {
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background: #ff3b30;
+                        box-shadow: 0 0 9px rgba(255,59,48,.8);
+                        content: "";
+                        animation: hp-blink 1.2s steps(2, start) infinite;
+                    }
+                    .hp-battery {
+                        position: relative;
+                        width: 26px;
+                        height: 12px;
+                        border: 1.5px solid currentColor;
+                        border-radius: 2px;
+                        padding: 1.5px;
+                    }
+                    .hp-battery::before { display: block; width: 70%; height: 100%; background: currentColor; content: ""; }
+                    .hp-battery::after {
+                        position: absolute; top: 3px; right: -5px;
+                        width: 3px; height: 4px; background: currentColor; content: "";
+                    }
+
+                    /* Autofocus brackets around the CHAYAMANA logo */
+                    .hp-focus {
+                        position: relative;
+                        display: inline-block;
+                        margin: 20px 0 10px -26px;
+                        padding: 20px 26px;
+                        background:
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 28px 2px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 2px 28px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 28px 2px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 2px 28px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 28px 2px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 2px 28px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 28px 2px no-repeat,
+                            linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 2px 28px no-repeat;
+                    }
+                    .hp-focus .hp-h1 { margin: 0; line-height: 0; }
+                    .hp-focus .hp-h1 img { max-width: 100%; height: auto; }
+                    .hp-focus-tag {
+                        position: absolute;
+                        right: 26px;
+                        bottom: -24px;
+                        color: var(--hp-accent);
+                        font-family: var(--hp-mono);
+                        font-size: 11px;
+                        letter-spacing: .2em;
+                        line-height: 1;
+                    }
+
+                    /* "Next shoot" countdown chip */
+                    .hp-chip {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 12px;
+                        margin-top: 34px;
+                        padding: 11px 20px;
+                        border: 1px solid rgba(255,255,255,.22);
+                        border-radius: 999px;
+                        color: rgba(255,255,255,.78);
+                        font-family: var(--hp-mono);
+                        font-size: 12px;
+                        letter-spacing: .14em;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        transition: border-color .3s, color .3s;
+                    }
+                    .hp-chip b { color: var(--hp-accent); font-weight: 700; }
+                    .hp-chip:hover,
+                    .hp-chip:focus-visible { border-color: var(--hp-accent); color: #fff; }
+
+                    /* ---- Section eyebrows: "Frame 01, 02..." ---- */
+                    .hp-eyebrow {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 26px;
+                        color: #888;
+                        font-family: var(--hp-mono);
+                        font-size: 12px;
+                        letter-spacing: .22em;
+                        text-transform: uppercase;
+                    }
+                    .hp-eyebrow::before {
+                        width: 8px; height: 8px; border-radius: 50%;
+                        background: var(--hp-accent); content: "";
+                    }
+                    .hp-eyebrow b { color: var(--hp-accent); font-weight: 700; }
+                    .hp-eyebrow.hp-light { color: rgba(255,255,255,.6); }
+
+                    /* ---- About: instant-print photo ---- */
+                    .hp-print {
+                        position: relative;
+                        padding: 14px 14px 0;
+                        background: #fff;
+                        box-shadow: 0 28px 55px rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.08);
+                        transform: rotate(-2.5deg);
+                        transition: transform .6s ease;
+                    }
+                    .hp-print:hover { transform: rotate(0deg) scale(1.01); }
+                    .hp-print::before {
+                        position: absolute;
+                        top: -15px;
+                        left: 50%;
+                        z-index: 4;
+                        width: 120px;
+                        height: 32px;
+                        background: rgba(255, 228, 170, .8);
+                        box-shadow: 0 2px 4px rgba(0,0,0,.08);
+                        transform: translateX(-50%) rotate(3deg);
+                        content: "";
+                    }
+                    .hp-datestamp {
+                        position: absolute;
+                        right: 16px;
+                        bottom: 14px;
+                        z-index: 3;
+                        color: #ff7a1a;
+                        font-family: var(--hp-mono);
+                        font-size: 15px;
+                        font-weight: 700;
+                        letter-spacing: .12em;
+                        text-shadow: 0 0 6px rgba(255,110,0,.75);
+                    }
+                    .hp-print-cap {
+                        margin: 0;
+                        padding: 20px 8px 24px;
+                        color: #333;
+                        font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                    /* ---- Moving film strip band ---- */
+                    .hp-film {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 26px 0;
+                        background: #0b0b0b;
+                    }
+                    .hp-film::before,
+                    .hp-film::after {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        height: 10px;
+                        background: repeating-linear-gradient(to right, rgba(255,255,255,.88) 0 14px, transparent 14px 30px);
+                        border-radius: 2px;
+                        content: "";
+                    }
+                    .hp-film::before { top: 7px; }
+                    .hp-film::after { bottom: 7px; }
+                    .hp-film-track {
+                        display: flex;
+                        width: max-content;
+                        animation: hp-marquee 32s linear infinite;
+                    }
+                    .hp-film-track span {
+                        padding: 0 26px;
+                        color: rgba(255,255,255,.88);
+                        font-size: 20px;
+                        letter-spacing: .3em;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                    }
+                    .hp-film-track i {
+                        color: var(--hp-accent);
+                        font-style: normal;
+                    }
+
+                    /* ---- Chief judge: framed print with AF brackets ---- */
+                    .mil-judge-section .mil-team-card { position: relative; }
+                    .hp-af {
+                        position: absolute;
+                        inset: 18px;
+                        z-index: 2;
+                        pointer-events: none;
+                        transition: inset .4s ease;
+                        background:
+                            linear-gradient(#fff, #fff) top left / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) top left / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) top right / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) top right / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) bottom left / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) bottom left / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) bottom right / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) bottom right / 2px 30px no-repeat;
+                        opacity: .8;
+                    }
+                    .mil-team-card:hover .hp-af { inset: 30px; opacity: 1; }
+                    .hp-judge-role {
+                        margin: -40px 0 26px;
+                        color: #555;
+                        font-size: 15px;
+                    }
+                    .hp-exif {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin: 0 0 40px;
+                        padding: 0;
+                        list-style: none;
+                    }
+                    .hp-exif li {
+                        padding: 5px 10px;
+                        border: 1px solid rgba(0,0,0,.15);
+                        border-radius: 3px;
+                        color: #444;
+                        font-family: var(--hp-mono);
+                        font-size: 11px;
+                        letter-spacing: .1em;
+                    }
+
+                    @keyframes hp-leak {
+                        from { transform: translate(0, 0) scale(1); opacity: .7; }
+                        to   { transform: translate(-8vw, 6vh) scale(1.15); opacity: 1; }
+                    }
+                    @keyframes hp-blink { to { visibility: hidden; } }
+                    @keyframes hp-marquee { to { transform: translateX(-50%); } }
+
+                    @media (max-width: 1200px) {
+                        .hp-vf { display: none; }
+                    }
+                    @media (max-width: 768px) {
+                        .hp-focus { margin-left: -14px; padding: 14px; }
+                        .hp-focus-tag { right: 14px; }
+                        .hp-chip { font-size: 10px; gap: 8px; padding: 10px 14px; }
+                        .hp-film-track span { font-size: 15px; padding: 0 16px; }
+                        .hp-print { transform: rotate(-1.5deg); }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                        .hp-leak, .hp-film-track, .hp-rec::before, .hp-chip::before { animation: none; }
+                    }
+                </style>
+
                 <!-- banner -->
                 <section class="mil-banner mil-dark-bg">
                     <div class="mi-invert-fix">
@@ -370,24 +712,32 @@
 
                         <div class="container">
                             <div class="mil-banner-content mil-up">
-<br><img src="Pics/chayamana logo.png" width="500" height="125" alt="description"> <br>                             <h3 class="mil-muted mil-mb-60">About <span class="mil-thin">CHAYAMANA</span></h3>
+                                <div class="hp-focus">
+                                    <h1 class="hp-h1">
+                                        <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
+                                        <span class="hp-sr">CHAYAMANA – photography exhibition and competition by MCPAS, Mahanama College Photographic Art Society</span>
+                                    </h1>
+                                    <span class="hp-focus-tag">AF · LOCKED</span>
+                                </div>
+                                <h3 class="mil-muted mil-mb-60">About <span class="mil-thin">CHAYAMANA</span></h3>
                                 <div class="row">
-                                    <div class="col-md-2 col-lg-8">
-                                        <p class="mil-light-soft mil-mb-80">CHAYAMANA is the flagship annual photography exhibition and competition organized by the Mahanama College Photographic Art Society (MCPAS). It provides a platform for young photographers across Sri Lanka to showcase their creativity, share unique perspectives, and celebrate the art of photography while promoting artistic excellence, technical skill, and innovation.
-</p>
-
+                                    <div class="col-md-12 col-lg-8">
+                                        <p class="mil-light-soft mil-mb-80">CHAYAMANA is the flagship annual photography exhibition and competition organized by the Mahanama College Photographic Art Society (MCPAS). It provides a platform for young photographers across Sri Lanka to showcase their creativity, share unique perspectives, and celebrate the art of photography while promoting artistic excellence, technical skill, and innovation.</p>
                                     </div>
                                 </div>
-<br>
+
                                 <div class="mil-competition-links">
-                                    <a href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener" class="mil-button mil-arrow-place">
+                                    <a href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener" data-no-swup class="mil-button mil-arrow-place">
                                         <span>Rules and Regulations</span>
                                     </a>
-                                    <a href="physical-competition.html" target="_blank" rel="noopener" class="mil-button mil-arrow-place">
+                                    <a href="physical-competition.html" data-no-swup class="mil-button mil-arrow-place">
                                         <span>For Physical Competition</span>
                                     </a>
                                 </div>
 
+                                <a href="physical-competition.html" data-no-swup class="hp-chip">
+                                    Next shoot · <b>Physical Competition</b> · Dec 05 2026<span id="hp-days"></span>
+                                </a>
 
                                 <a href="#rules" data-no-swup data-native-anchor class="mil-circle-text" aria-label="Scroll to Rules and Regulations">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
@@ -398,7 +748,6 @@
                                         <g>
                                             <use xlink:href="#circlePath" fill="none" />
                                             <text style="letter-spacing: 6.5px">
-                                                <!-- circle text -->
                                                 <textPath xlink:href="#circlePath">Scroll down -Rules And Regulations- </textPath>
                                             </text>
                                         </g>
@@ -407,6 +756,20 @@
                                 </a>
 
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- light leak + camera viewfinder overlay -->
+                    <div class="hp-leak" aria-hidden="true"></div>
+                    <div class="hp-vf" aria-hidden="true">
+                        <div class="hp-vf-top">
+                            <span class="hp-rec">REC</span>
+                            <span>CHAYAMANA 2026</span>
+                            <span class="hp-battery"></span>
+                        </div>
+                        <div class="hp-vf-bottom">
+                            <span><b>f/</b>2.8 &nbsp;·&nbsp; 1/250s &nbsp;·&nbsp; ISO 400</span>
+                            <span>[ AF ] &nbsp;·&nbsp; RAW</span>
                         </div>
                     </div>
                 </section>
@@ -419,25 +782,17 @@
                             <div class="col-lg-6 col-xl-5">
 
                                 <div class="mil-mb-90">
-                                    <h2><span class="mil-thin">History<br> OF</span> <b>CHAYAMANA</b></h2>
-                                    <p class="mil-up mil-mb-60">Since its inception, CHAYAMANA has evolved from a school photography exhibition into one of Sri
-Lanka's respected inter-school photography events. Organized annually by the Mahanama College
-Photographic Art Society (MCPAS), the exhibition has provided countless young photographers
-with the opportunity to display their work, receive professional recognition, and develop their artistic
-vision.
-Each edition reflects the dedication of the organizing committee, the passion of participating
-photographers, and the continued growth of photographic art within the school community. While
-embracing modern techniques and evolving styles, CHAYAMANA remains committed to its
-founding purpose—promoting creativity, encouraging excellence, and inspiring a lifelong
-appreciation for photography.</p>
+                                    <span class="hp-eyebrow mil-up">Frame 01 · <b>Our story</b></span>
+                                    <h2 class="mil-mb-60"><span class="mil-thin">History<br> OF</span> <b>CHAYAMANA</b></h2>
+                                    <p class="mil-up mil-mb-60">Since its inception, CHAYAMANA has evolved from a school photography exhibition into one of Sri Lanka's respected inter-school photography events. Organized annually by the Mahanama College Photographic Art Society (MCPAS), the exhibition has provided countless young photographers with the opportunity to display their work, receive professional recognition, and develop their artistic vision.</p>
 
-                                    <p class="mil-up mil-mb-60">Collaboration is at the heart of what we do. Our team thrives on the synergy that arises when unique perspectives converge, fostering an environment of boundless creativity. By harnessing our collective expertise, we produce extraordinary results that consistently surpass expectations.</p>
+                                    <p class="mil-up mil-mb-60">Each edition reflects the dedication of the organizing committee, the passion of participating photographers, and the continued growth of photographic art within the school community. While embracing modern techniques and evolving styles, CHAYAMANA remains committed to its founding purpose — promoting creativity, encouraging excellence, and inspiring a lifelong appreciation for photography.</p>
 
                                     <div class="mil-about-quote">
                                         <div class="mil-avatar mil-up">
-                                           <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg">
+                                            <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg" alt="CHAYAMANA exhibition">
                                         </div>
-                                        <h6 class="mil-quote mil-up">The CHAYAMANA<span class="mil-thin"> Photographic exhibition was established By:</span>under the leadership of<b> Sethika Rathnayake</b></h6>
+                                        <h6 class="mil-quote mil-up">The CHAYAMANA <span class="mil-thin">photographic exhibition was established under the leadership of</span> <b>Sethika Rathnayake</b></h6>
                                     </div>
                                 </div>
 
@@ -446,8 +801,14 @@ appreciation for photography.</p>
 
                                 <div class="mil-about-photo mil-mb-90">
                                     <div class="mil-lines-place"></div>
-                                    <div class="mil-up mil-img-frame mil-photo-slideshow" style="padding-bottom: 160%;">
-                                        <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg" class="mil-slide-img mil-slide-active" alt="About photo">
+                                    <div class="mil-up">
+                                        <div class="hp-print">
+                                            <div class="mil-img-frame mil-photo-slideshow" style="padding-bottom: 120%;">
+                                                <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg" class="mil-slide-img mil-slide-active" alt="CHAYAMANA exhibition">
+                                                <span class="hp-datestamp" aria-hidden="true">MCPAS '26</span>
+                                            </div>
+                                            <p class="hp-print-cap">Where it all began</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -457,25 +818,32 @@ appreciation for photography.</p>
                 </section>
                 <!-- about end -->
 
-                <!-- services -->
+                <!-- moving film strip -->
+                <div class="hp-film" aria-hidden="true">
+                    <div class="hp-film-track">
+                        <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Capture the moment <i>◉</i></span>
+                        <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Capture the moment <i>◉</i></span>
+                    </div>
+                </div>
+                <!-- film strip end -->
+
+                <!-- submissions -->
                 <section id="rules" class="mil-dark-bg">
                     <div class="mi-invert-fix">
                         <div class="mil-animation-frame">
                             <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
                             <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px"></div>
                         </div>
-                        
+
                         <div class="container mil-p-120-0">
 
                             <div class="mil-mb-120">
                                 <div class="mil-complex-text mil-rules-title justify-content-center mil-up mil-mb-15">
+                                    <span class="hp-eyebrow hp-light">Frame 02 · <b>Call for entries</b></span>
                                     <span class="mil-rules-badge"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></span>
                                     <h2 class="mil-h1 mil-muted mil-center">Submissions<span class="mil-thin"> Are Here</span></h2>
-
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
-
-                                    
                                     <div class="mil-center mil-up mil-mb-30">
                                         <a data-no-swup href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener" class="mil-button mil-arrow-place">
                                             <span>Click Here For Submissions</span>
@@ -487,32 +855,26 @@ appreciation for photography.</p>
                         </div>
                     </div>
                 </section>
-                <!-- services end -->
+                <!-- submissions end -->
 
-                <!-- team -->
+                <!-- chief judge -->
                 <section class="mil-judge-section">
                     <div class="container mil-p-120-30">
                         <div class="row justify-content-between align-items-center">
                             <div class="col-lg-5 col-xl-4">
 
                                 <div class="mil-mb-90">
+                                    <span class="hp-eyebrow mil-up">Frame 03 · <b>The judge</b></span>
                                     <h2 class="mil-up mil-mb-60"><strong>A Visionary Perspective</strong></h2>
-                                    <p class="mil-up mil-mb-30">
+                                    <p class="mil-up hp-judge-role"><b>Mr. Sanka Sammana</b> — President of the National Photographic Art Society of Sri Lanka (NPAS)</p>
 
-<b>Mr. Sanka Sammana</b>
+                                    <p class="mil-up mil-mb-30">An accomplished figure in the field of photography, Mr. Sanka Sammana brings a wealth of experience, expertise and passion to CHAYAMANA 2026. As President of the National Photographic Art Society of Sri Lanka, he has made significant contributions to the photographic community, inspiring photographers and supporting the growth of photographic art in Sri Lanka.</p>
 
-President of the National Photographic Art Society of Sri Lanka (NPAS)
+                                    <p class="mil-up mil-mb-30">For CHAYAMANA 2026, he joins us as our Chief Judge and Event Coordinator, bringing his distinguished expertise and vision to ensure a meaningful and inspiring celebration of photography.</p>
 
-An accomplished figure in the field of photography, Mr. Sanka Sammana brings a wealth of experience, expertise and passion to CHAYAMANA 2026.
-
-As the President of the National Photographic Art Society of Sri Lanka, he has made significant contributions to the photographic community, inspiring photographers and supporting the growth of photographic art in Sri Lanka.
-
-For CHAYAMANA 2026, he joins us as our Chief Judge and Event Coordinator, bringing his distinguished expertise and vision to ensure a meaningful and inspiring celebration of photography.
-
-Distinctions & Affiliations
-EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</p>
-
-                                    <p class="mil-up mil-mb-60">Together, our creative team is committed to delivering impactful work that exceeds expectations.</p>
+                                    <ul class="hp-exif mil-up" aria-label="Distinctions and affiliations">
+                                        <li>EFIAP</li><li>GPU CR 2</li><li>GPU Aphrodite</li><li>GAPU</li><li>LPSS</li><li>FNAPSL</li><li>ANPAS</li><li>AISLP</li>
+                                    </ul>
 
                                     <h4 class="mil-up"><span class="mil-thin">Meet our</span><br><span class="mil-strong">Chief Judge.</span></h4>
                                 </div>
@@ -523,41 +885,45 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                 <div class="mil-team-list">
                                     <div class="mil-lines-place"></div>
 
-                            
                                     <div class="row mil-mb-60 justify-content-center">
                                         <div class="col-12 col-md-10 col-lg-9">
 
                                             <div class="mil-team-card mil-up mil-mb-30">
-                                                <img loading="lazy" src="Pics/Exco/Mr-Sanka-Sammana.jpg.jpeg" alt="Mr. Sanka Sammana">
+                                                <img loading="lazy" src="Pics/Exco/Mr-Sanka-Sammana.jpg.jpeg" alt="Mr. Sanka Sammana, Chief Judge of CHAYAMANA 2026">
+                                                <span class="hp-af" aria-hidden="true"></span>
                                                 <div class="mil-description">
                                                     <div class="mil-secrc-text">
-                                                        <h5 class="mil-muted mil-mb-5">Sanka </h5>
+                                                        <h5 class="mil-muted mil-mb-5">Sanka</h5>
                                                         <p class="mil-link mil-light-soft mil-mb-10">Sammana</p>
                                                         <ul class="mil-social-icons mil-center">
-                                                            <li><a href="https://www.facebook.com/share/1GiiQNF1Se/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Visit Sanka Sammana on Facebook"> <i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                                            <li><a href="https://www.facebook.com/share/1GiiQNF1Se/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" data-no-swup class="social-icon" aria-label="Visit Sanka Sammana on Facebook"> <i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            
                                         </div>
-                </section>
-                <!-- team end -->
+                                    </div>
+                                </div>
 
-                <!-- reviews -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- chief judge end -->
+
+                <!-- exco -->
                 <section class="mil-soft-bg">
                     <div class="container mil-p-120-120">
 
                         <div class="row">
                             <div class="col-lg-10">
-
                                 <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">Meet<br><span class="mil-thin">Our EXCO Panel</span></span>
-
                             </div>
                         </div>
 
-                        <h2 class="mil-center mil-up mil-mb-60">Meet<span class="mil-thin">Our</span> <br>EXCO<span class="mil-thin"> Panel</span></h2>
+                        <div class="mil-center"><span class="hp-eyebrow mil-up">Frame 04 · <b>Behind the lens</b></span></div>
+                        <h2 class="mil-center mil-up mil-mb-60">Meet <span class="mil-thin">Our</span> <br>EXCO<span class="mil-thin"> Panel</span></h2>
 
                         <div class="mil-revi-pagination mil-up mil-mb-60"></div>
 
@@ -578,7 +944,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-03-10 at 13.06.12.jpeg" alt="Virul Bonula">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-03-10 at 13.06.12.jpeg" alt="Virul Bonula, Club President">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Virul Bonula</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club President</p>
@@ -588,7 +954,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/IMG_0267 (1).jpg" alt="Inura">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0267 (1).jpg" alt="Inura Samarasinghe, Club Secretary">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Inura Samarasinghe</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Secretary</p>
@@ -598,7 +964,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/IMG_0259 (1).jpg" alt="Senuda">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0259 (1).jpg" alt="Senuda Disas, Club Treasurer">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Senuda Disas</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Treasurer</p>
@@ -608,17 +974,17 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/IMG_0248.jpg" alt="Chamathka">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0248.jpg" alt="Chamathka Sadaru, Club Vice President">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Chamathka Sadaru</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice President</p>
-                                                <p class="mil-text-xl mil-up">Chamathka Sandaru joined MCPAS as an active member in 2025 and now serves as Club Vice President. He supports the club's leadership with commitment and a clear focus on advancing its goals.</p>
+                                                <p class="mil-text-xl mil-up">Chamathka Sadaru joined MCPAS as an active member in 2025 and now serves as Club Vice President. He supports the club's leadership with commitment and a clear focus on advancing its goals.</p>
                                             </div>
                                         </div>
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/IMG_0272.jpg" alt="Pavan">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0272.jpg" alt="Pavan Bandara, Club Vice Secretary">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Pavan Bandara</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice Secretary</p>
@@ -628,7 +994,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/IMG_0312.jpg" alt="Janidu">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0312.jpg" alt="Janidu Ayodhya, Club Vice Treasurer">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Janidu Ayodhya</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice Treasurer</p>
@@ -638,7 +1004,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-07-20 at 9.17.09 PM.jpeg" alt="Nikesh">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-07-20 at 9.17.09 PM.jpeg" alt="Nikesh Guruge, Club Coordinator">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Nikesh Guruge</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Coordinator</p>
@@ -648,7 +1014,7 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         <div class="swiper-slide">
                                             <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
                                                 <div class="mil-review-avatar">
-                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-09-10 at 2.55.40 PM.jpeg" alt="Navinu">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-09-10 at 2.55.40 PM.jpeg" alt="Navinu Brandi, Club Coordinator">
                                                 </div>
                                                 <h5 class="mil-up mil-mb-10">Navinu Brandi</h5>
                                                 <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Coordinator</p>
@@ -663,41 +1029,40 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
 
                     </div>
                 </section>
-                <!-- reviews end -->
+                <!-- exco end -->
 
                 <!-- partners -->
-<div class="mil-soft-bg mil-partners-black">
-    <div class="container">
+                <div class="mil-soft-bg mil-partners-black">
+                    <div class="container">
                         <div class="swiper-container mil-infinite-show mil-up">
-                            
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="MCPAS"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></a>
                                 </div>
                                 <div class="swiper-slide">
-                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="logo"></a>
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="MCPAS"></a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <!-- partners end -->
-<!-- map -->
-<div class="mil-map-frame mil-up">
-    <a href="https://www.google.com/maps/search/?api=1&query=Mahanama+College+Colombo+03" target="_blank" rel="noopener" data-no-swup aria-label="Open Mahanama College in Google Maps" style="display:block; position:relative; width:100%; height:100%; z-index:1;">
-        <div class="mil-map" style="width:100%; height:100%;">
-            <iframe src="https://www.google.com/maps?q=Mahanama+College+Colombo+03&z=15&output=embed" style="border:0; width:100%; height:100%; display:block; background:#ddd;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </a>
-</div>
-<!-- map end -->
+
+                <!-- map -->
+                <div class="mil-map-frame mil-up">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mahanama+College+Colombo+03" target="_blank" rel="noopener" data-no-swup aria-label="Open Mahanama College in Google Maps" style="display:block; position:relative; width:100%; height:100%; z-index:1;">
+                        <div class="mil-map" style="width:100%; height:100%;">
+                            <iframe src="https://www.google.com/maps?q=Mahanama+College+Colombo+03&z=15&output=embed" title="Mahanama College location" style="border:0; width:100%; height:100%; display:block; background:#ddd;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </a>
+                </div>
+                <!-- map end -->
 
                 <!-- footer -->
                 <footer class="mil-dark-bg">
@@ -706,9 +1071,9 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                             <div class="row justify-content-between">
                                 <div class="col-md-4 col-lg-4 mil-mb-60">
 
-                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><IMG src="Pics/chayamana logo.png" alt="logo" style="width: 100px;"></div>
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><img src="Pics/chayamana logo.png" alt="CHAYAMANA logo" style="width: 100px;"></div>
 
-                                    <p class="mil-light-soft mil-up mil-mb-30">Photography And Art Society of Mahanama Collage:</p>
+                                    <p class="mil-light-soft mil-up mil-mb-30">CHAYAMANA – the annual photographic exhibition and competition by MCPAS, Mahanama College Photographic Art Society.</p>
 
                                 </div>
                                 <div class="col-md-7 col-lg-6">
@@ -732,6 +1097,10 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                         </div>
                                         <div class="col-md-6 col-lg-5">
 
+                                            <ul class="mil-menu-list mil-up mil-mb-60">
+                                                <li><a href="physical-competition.html" data-no-swup class="mil-light-soft">Physical Competition</a></li>
+                                                <li><a href="https://www.instagram.com/mcpas.official/" target="_blank" rel="noopener" data-no-swup class="mil-light-soft">Instagram</a></li>
+                                            </ul>
 
                                         </div>
                                     </div>
@@ -765,13 +1134,10 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                                     <div class="mil-vert-between">
                                         <div class="mil-mb-30">
                                             <ul class="mil-social-icons mil-up">
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
-                                                <li><a href="#." target="_blank" class="social-icon"> <i class="far fa-circle"></i></a></li>
+                                                <li><a href="https://www.instagram.com/mcpas.official/" target="_blank" rel="noopener" data-no-swup class="social-icon" aria-label="MCPAS on Instagram"> <i class="fab fa-instagram" aria-hidden="true"></i></a></li>
                                             </ul>
                                         </div>
-                                        <p class="mil-light-soft mil-up">© Copyright 2026 - Mil. All Rights Reserved by MCPAS.</p>
+                                        <p class="mil-light-soft mil-up">© 2026 MCPAS – Mahanama College Photographic Art Society. All rights reserved.</p>
                                     </div>
 
                                 </div>
@@ -784,90 +1150,18 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
                 <!-- hidden elements -->
                 <div class="mil-hidden-elements">
                     <div class="mil-dodecahedron">
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="mil-pentagon">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
                     </div>
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
@@ -949,6 +1243,20 @@ EFIAP · GPU CR 2 · GPU Aphrodite · GAPU · LPSS · FNAPSL · ANPAS · AISLP</
             }, 5000);
         }
     });
+    </script>
+
+    <!-- "days to go" on the Next shoot chip -->
+    <script>
+    (function () {
+        function hpDays() {
+            var el = document.getElementById('hp-days');
+            if (!el) return;
+            var d = Math.ceil((new Date(2026, 11, 5) - new Date()) / 86400000);
+            el.textContent = d > 1 ? ' · ' + d + ' days to go' : d === 1 ? ' · tomorrow' : d === 0 ? ' · today' : '';
+        }
+        document.addEventListener('DOMContentLoaded', hpDays);
+        document.addEventListener('swup:contentReplaced', hpDays);
+    })();
     </script>
 
 </body>

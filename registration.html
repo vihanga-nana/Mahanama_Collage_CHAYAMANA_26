@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- same theme css as the home page (fonts + base styles) -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Registration | CHAYAMANA 2026 – MCPAS</title>
+    <link rel="icon" type="image/png" href="Pics/IMG_8922.PNG">
+    <meta name="description" content="Register your school for CHAYAMANA 2026, the inter-school physical photographic competition by MCPAS, Mahanama College, Colombo.">
+    <link rel="canonical" href="https://mcpas.mcmu.lk/registration.html">
+
+    <style>
+        :root { --hp-accent: #ff9800; --hp-mono: "Courier New", ui-monospace, monospace; }
+
+        html, body {
+            margin: 0;
+            background: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ---- dark page with the orange light leak, like the home page hero ---- */
+        .rg-page {
+            position: relative;
+            min-height: 100vh;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 15% 110%, rgba(255,152,0,.08) 0%, transparent 55%),
+                linear-gradient(180deg, #0b0b0b 0%, #000 60%);
+        }
+        .rg-leak {
+            position: absolute;
+            top: -20%;
+            right: -15%;
+            width: 70vw;
+            height: 70vw;
+            max-width: 950px;
+            max-height: 950px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,152,0,.2) 0%, rgba(255,72,0,.07) 40%, transparent 70%);
+            filter: blur(30px);
+            pointer-events: none;
+            animation: rg-leak 16s ease-in-out infinite alternate;
+        }
+        @keyframes rg-leak {
+            from { transform: translate(0, 0) scale(1); opacity: .7; }
+            to   { transform: translate(-8vw, 6vh) scale(1.15); opacity: 1; }
+        }
+
+        /* ---- top bar ---- */
+        .rg-top {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 24px;
+        }
+        .rg-top img { height: 40px; width: auto; display: block; }
+        .rg-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 22px;
+            border-radius: 40px;
+            background: var(--hp-accent);
+            color: #000;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: transform .3s ease;
+        }
+        .rg-back:hover { transform: scale(1.04); }
+
+        /* ---- heading ---- */
+        .rg-head {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px 40px;
+            text-align: center;
+        }
+        .rg-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+            margin: 0 0 28px;
+            color: rgba(255,255,255,.6);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+        }
+        .rg-kicker::before,
+        .rg-kicker::after {
+            width: 40px;
+            height: 1px;
+            background: var(--hp-accent);
+            content: "";
+        }
+        .rg-logo { display: block; width: min(460px, 78vw); height: auto; margin: 0 auto 34px; }
+        .rg-title {
+            margin: 0 0 18px;
+            color: #fff;
+            font-size: clamp(28px, 5vw, 48px);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+        .rg-title span { font-weight: 200; }
+        .rg-sub { margin: 0; color: rgba(255,255,255,.55); line-height: 1.8; }
+
+        /* event information bar */
+        .rg-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px auto 0;
+            padding-top: 26px;
+            border-top: 1px solid rgba(255,255,255,.12);
+        }
+        .rg-meta > div {
+            padding: 0 32px;
+            border-left: 1px solid rgba(255,255,255,.12);
+            text-align: center;
+        }
+        .rg-meta > div:first-child { border-left: 0; }
+        .rg-meta span {
+            display: block;
+            margin-bottom: 8px;
+            color: rgba(255,255,255,.45);
+            font-size: 11px;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+        }
+        .rg-meta b { color: #fff; font-size: 17px; font-weight: 500; }
+        .rg-meta b.rg-accent { color: var(--hp-accent); }
+
+        /* ---- film strip band ---- */
+        .rg-film {
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            margin: 50px 0;
+            padding: 24px 0;
+            background: #0b0b0b;
+        }
+        .rg-film::before,
+        .rg-film::after {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(to right, rgba(255,255,255,.88) 0 14px, transparent 14px 30px);
+            content: "";
+        }
+        .rg-film::before { top: 7px; }
+        .rg-film::after { bottom: 7px; }
+        .rg-film-track {
+            display: flex;
+            width: max-content;
+            animation: rg-marquee 32s linear infinite;
+        }
+        .rg-film-track span {
+            padding: 0 26px;
+            color: rgba(255,255,255,.88);
+            font-size: 18px;
+            letter-spacing: .3em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        .rg-film-track i { color: var(--hp-accent); font-style: normal; }
+        @keyframes rg-marquee { to { transform: translateX(-50%); } }
+
+        /* ---- the form, framed like a photo print with viewfinder corners ---- */
+        .rg-form-wrap {
+            position: relative;
+            z-index: 2;
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 16px 100px;
+        }
+        .rg-frame {
+            position: relative;
+            padding: 18px;
+            border: 1px solid rgba(255,255,255,.1);
+            border-radius: 10px;
+            background: rgba(255,255,255,.03);
+            box-shadow: 0 30px 80px rgba(0,0,0,.6);
+        }
+        .rg-frame::before {
+            position: absolute;
+            inset: -10px;
+            pointer-events: none;
+            background:
+                linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 34px 2px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) top left / 2px 34px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 34px 2px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) top right / 2px 34px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 34px 2px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) bottom left / 2px 34px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 34px 2px no-repeat,
+                linear-gradient(var(--hp-accent), var(--hp-accent)) bottom right / 2px 34px no-repeat;
+            content: "";
+        }
+        .rg-frame iframe {
+            display: block;
+            width: 100%;
+            height: 2400px;
+            border: 0;
+            border-radius: 6px;
+            background: #111;
+        }
+        .rg-note {
+            margin: 22px 0 0;
+            color: rgba(255,255,255,.45);
+            font-size: 13px;
+            text-align: center;
+        }
+        .rg-note a { color: var(--hp-accent); }
+
+        /* ---- footer ---- */
+        .rg-foot {
+            position: relative;
+            z-index: 2;
+            padding: 40px 24px;
+            border-top: 1px solid rgba(255,255,255,.08);
+            color: rgba(255,255,255,.45);
+            font-size: 13px;
+            text-align: center;
+        }
+        .rg-foot a { color: rgba(255,255,255,.75); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .rg-head { padding-top: 30px; }
+            .rg-meta > div { width: 50%; padding: 0 0 18px; border-left: 0; }
+            .rg-film-track span { font-size: 14px; padding: 0 16px; }
+            .rg-frame { padding: 8px; }
+            .rg-frame iframe { height: 2700px; }
+            .rg-back { padding: 10px 16px; font-size: 11px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .rg-leak, .rg-film-track { animation: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rg-page">
+        <div class="rg-leak" aria-hidden="true"></div>
+
+        <!-- top bar -->
+        <header class="rg-top">
+            <a href="index.html"><img src="Pics/IMG_8922.PNG" alt="MCPAS logo"></a>
+            <a href="index.html" class="rg-back">&larr; Back to home</a>
+        </header>
+
+        <!-- heading -->
+        <section class="rg-head">
+            <p class="rg-kicker">MCPAS presents · 2026 Edition</p>
+            <img class="rg-logo" src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
+            <h1 class="rg-title">School Registrations <span>are open now</span></h1>
+            <p class="rg-sub">Chayamana '26 Inter-School Physical Photographic Competition.<br>Fill in the form below to register your school.</p>
+
+            <div class="rg-meta">
+                <div><span>Date</span><b>05 Dec 2026</b></div>
+                <div><span>Time</span><b>8.30 am onwards</b></div>
+                <div><span>Venue</span><b>Mahanama College</b></div>
+                <div><span>Countdown</span><b class="rg-accent" id="rg-days">Coming soon</b></div>
+            </div>
+        </section>
+
+        <!-- film strip -->
+        <div class="rg-film" aria-hidden="true">
+            <div class="rg-film-track">
+                <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Register now <i>◉</i></span>
+                <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Register now <i>◉</i></span>
+            </div>
+        </div>
+
+        <!-- Google Form -->
+        <section class="rg-form-wrap" id="form">
+            <div class="rg-frame">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwKsdvFg3-43NPmCktDXfMMDuFuDnpxbiOrNExhH1rx2hi5Q/viewform?embedded=true" title="Participation form of Chayamana" loading="lazy">Loading…</iframe>
+            </div>
+            <p class="rg-note">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwKsdvFg3-43NPmCktDXfMMDuFuDnpxbiOrNExhH1rx2hi5Q/viewform" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+        </section>
+
+        <!-- footer -->
+        <footer class="rg-foot">
+            <p>Questions? Chamathka Sadaru <a href="tel:+94778400503">0778400503</a> · Pavan Bandara <a href="tel:+94706088879">0706088879</a></p>
+            <p>© 2026 MCPAS – Mahanama College Photographic Art Society</p>
+        </footer>
+    </div>
+
+    <script>
+    (function () {
+        var el = document.getElementById('rg-days');
+        if (!el) return;
+        var d = Math.ceil((new Date(2026, 11, 5) - new Date()) / 86400000);
+        el.textContent = d > 1 ? d + ' days to go' : d === 1 ? 'Tomorrow' : d === 0 ? 'Today' : 'Concluded';
+    })();
+    </script>
+</body>
+
+</html>

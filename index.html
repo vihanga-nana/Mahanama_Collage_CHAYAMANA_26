@@ -677,6 +677,28 @@
                             justify-content: center;
                         }
                         .mil-banner .mil-circle-text .mil-button span { display: none; }
+
+                        /* force the yellow arrow button into a true circle */
+                        .mil-banner a.mil-circle-text > span.mil-button.mil-icon-button,
+                        .mil-banner a.mil-circle-text > span.mil-button.mil-icon-button:hover {
+                            box-sizing: border-box !important;
+                            flex: 0 0 56px !important;
+                            width: 56px !important;
+                            height: 56px !important;
+                            max-width: 56px !important;
+                            max-height: 56px !important;
+                            min-height: 0 !important;
+                            aspect-ratio: 1 / 1 !important;
+                            padding: 0 !important;
+                            line-height: 0 !important;
+                            border-radius: 50% !important;
+                            transform: none !important;
+                        }
+                        .mil-banner a.mil-circle-text > span.mil-button.mil-icon-button svg {
+                            margin: 0 !important;
+                            width: 22px !important;
+                            height: 22px !important;
+                        }
                     }
                     @media screen and (max-width: 768px) {
                         .mil-banner .mil-banner-content .mil-circle-text,
@@ -686,9 +708,13 @@
                             min-width: 110px;
                             margin: 50px 20px 0 auto !important;
                         }
-                        .mil-banner .mil-circle-text .mil-button {
+                        .mil-banner a.mil-circle-text > span.mil-button.mil-icon-button,
+                        .mil-banner a.mil-circle-text > span.mil-button.mil-icon-button:hover {
+                            flex: 0 0 48px !important;
                             width: 48px !important;
                             height: 48px !important;
+                            max-width: 48px !important;
+                            max-height: 48px !important;
                         }
                     }
 
@@ -758,7 +784,7 @@
                                         <circle cx="150" cy="100" r="75" fill="none" />
                                         <g>
                                             <use xlink:href="#circlePath" fill="none" />
-                                            <text style="letter-spacing: 6.5px">
+                                            <text style="letter-spacing: 4px">
                                                 <textPath xlink:href="#circlePath">Scroll down for Registrations-</textPath>
                                             </text>
                                         </g>
@@ -841,7 +867,7 @@
                                 <div class="mil-complex-text mil-rules-title justify-content-center mil-up mil-mb-15">
                                     <span class="hp-eyebrow hp-light">Frame 02 · <b>Call for entries</b></span>
                                     <span class="mil-rules-badge"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></span>
-                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin"> are open now</span></h2>
+                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin">are open now</span></h2>
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
                                     <div class="mil-center mil-up mil-mb-30">

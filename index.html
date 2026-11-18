@@ -639,7 +639,11 @@
                             left: auto !important;
                             width: 130px !important;
                             height: 130px !important;
-                            margin: 50px 0 0 !important;
+                            min-width: 130px;
+                            aspect-ratio: 1 / 1;
+                            flex-shrink: 0;
+                            margin: 60px 10px 0 auto !important;   /* auto on the left pushes it to the right side */
+                            border-radius: 50%;
                             align-items: center;
                             justify-content: center;
                             opacity: 1 !important;
@@ -658,16 +662,33 @@
                             fill: rgba(255,255,255,.7);
                             font-size: 15px;
                         }
+                        /* the arrow in the middle: a perfect round button */
                         .mil-banner .mil-circle-text .mil-button {
                             display: flex !important;
+                            position: relative;
+                            z-index: 2;
+                            width: 56px !important;
+                            height: 56px !important;
+                            min-width: 0 !important;
+                            padding: 0 !important;
+                            margin: 0 !important;
+                            border-radius: 50% !important;
+                            align-items: center;
+                            justify-content: center;
                         }
+                        .mil-banner .mil-circle-text .mil-button span { display: none; }
                     }
                     @media screen and (max-width: 768px) {
                         .mil-banner .mil-banner-content .mil-circle-text,
                         .mil-banner .mil-circle-text {
                             width: 110px !important;
                             height: 110px !important;
-                            margin: 40px auto 0 !important;
+                            min-width: 110px;
+                            margin: 50px 20px 0 auto !important;
+                        }
+                        .mil-banner .mil-circle-text .mil-button {
+                            width: 48px !important;
+                            height: 48px !important;
                         }
                     }
 
@@ -737,7 +758,7 @@
                                         <circle cx="150" cy="100" r="75" fill="none" />
                                         <g>
                                             <use xlink:href="#circlePath" fill="none" />
-                                            <text style="letter-spacing: 4px">
+                                            <text style="letter-spacing: 6.5px">
                                                 <textPath xlink:href="#circlePath">Scroll down for Registrations-</textPath>
                                             </text>
                                         </g>
@@ -820,7 +841,7 @@
                                 <div class="mil-complex-text mil-rules-title justify-content-center mil-up mil-mb-15">
                                     <span class="hp-eyebrow hp-light">Frame 02 · <b>Call for entries</b></span>
                                     <span class="mil-rules-badge"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></span>
-                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin">are open now</span></h2>
+                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin"> are open now</span></h2>
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
                                     <div class="mil-center mil-up mil-mb-30">

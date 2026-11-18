@@ -221,7 +221,10 @@
             max-height: 1100px;
             border: 0;
             border-radius: 6px;
-            background: #111;
+            background: #eee;   /* becomes dark after the filter below */
+            /* dark mode for the Google Form: turns the white boxes dark and the text light,
+               hue-rotate keeps the orange/red colours close to the originals */
+            filter: invert(.9) hue-rotate(180deg) contrast(1.05);
         }
         .rg-note {
             margin: 22px 0 0;

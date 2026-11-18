@@ -627,6 +627,50 @@
                         .mil-banner .mil-banner-content p.mil-light-soft { margin-bottom: 44px !important; }
                     }
 
+                    /* ---- Rotating "Scroll down" circle: keep it visible on phones/tablets ---- */
+                    @media screen and (max-width: 1200px) {
+                        .mil-banner .mil-banner-content .mil-circle-text,
+                        .mil-banner .mil-circle-text {
+                            display: flex !important;
+                            position: relative !important;
+                            top: auto !important;
+                            right: auto !important;
+                            bottom: auto !important;
+                            left: auto !important;
+                            width: 130px !important;
+                            height: 130px !important;
+                            margin: 50px 0 0 !important;
+                            align-items: center;
+                            justify-content: center;
+                            opacity: 1 !important;
+                            visibility: visible !important;
+                        }
+                        .mil-banner .mil-circle-text .mil-ct-svg {
+                            display: block !important;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100% !important;
+                            height: 100% !important;
+                            transform: scale(1.9);
+                        }
+                        .mil-banner .mil-circle-text .mil-ct-svg text {
+                            fill: rgba(255,255,255,.7);
+                            font-size: 15px;
+                        }
+                        .mil-banner .mil-circle-text .mil-button {
+                            display: flex !important;
+                        }
+                    }
+                    @media screen and (max-width: 768px) {
+                        .mil-banner .mil-banner-content .mil-circle-text,
+                        .mil-banner .mil-circle-text {
+                            width: 110px !important;
+                            height: 110px !important;
+                            margin: 40px auto 0 !important;
+                        }
+                    }
+
                     @keyframes hp-leak {
                         from { transform: translate(0, 0) scale(1); opacity: .7; }
                         to   { transform: translate(-8vw, 6vh) scale(1.15); opacity: 1; }
@@ -675,7 +719,7 @@
                                         <span>Rules and Regulations</span>
                                     </a>
                                     <a href="physical-competition.html" data-no-swup class="mil-button mil-arrow-place">
-                                        <span>For Physical Competition</span>
+                                        <span>Physical Competition</span>
                                     </a>
                                 </div>
 
@@ -693,8 +737,8 @@
                                         <circle cx="150" cy="100" r="75" fill="none" />
                                         <g>
                                             <use xlink:href="#circlePath" fill="none" />
-                                            <text style="letter-spacing: 6.5px">
-                                                <textPath xlink:href="#circlePath">Scroll down -Rules And Regulations- </textPath>
+                                            <text style="letter-spacing: 4px">
+                                                <textPath xlink:href="#circlePath">Scroll down for Registrations-</textPath>
                                             </text>
                                         </g>
                                     </svg>
@@ -776,12 +820,12 @@
                                 <div class="mil-complex-text mil-rules-title justify-content-center mil-up mil-mb-15">
                                     <span class="hp-eyebrow hp-light">Frame 02 · <b>Call for entries</b></span>
                                     <span class="mil-rules-badge"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></span>
-                                    <h2 class="mil-h1 mil-muted mil-center">Submissions<span class="mil-thin"> Are Here</span></h2>
+                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin">are open now</span></h2>
                                 </div>
                                 <div class="mil-complex-text justify-content-center mil-up">
                                     <div class="mil-center mil-up mil-mb-30">
                                         <a data-no-swup href="Yellow and Grey Modern Clean Company Project Proposal.pdf" target="_blank" rel="noopener" class="mil-button mil-arrow-place">
-                                            <span>Click Here For Submissions</span>
+                                            <span>Click here for Registrations</span>
                                         </a>
                                     </div>
                                 </div>

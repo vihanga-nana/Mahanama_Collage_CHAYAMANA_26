@@ -1,506 +1,1371 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CHAYAMANA 2026 – You're Invited | MCPAS</title>
-  <meta name="description" content="You are cordially invited to CHAYAMANA 2026, the photographic exhibition of the Mahanama College Photographic Art Society.">
 
-  <!-- Link preview for WhatsApp / Facebook (change the URLs after uploading) -->
-  <meta property="og:title" content="You're Invited – CHAYAMANA 2026">
-  <meta property="og:description" content="Photographic Exhibition by the Mahanama College Photographic Art Society">
-  <meta property="og:image" content="https://mcpas.mcmu.lk/images/cover.jpg">
-  <meta property="og:url" content="https://mcpas.mcmu.lk/invitation.html">
-  <meta property="og:type" content="website">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-/* ===== CHAYAMANA 2026 e-invitation – styles ===== */
-:root {
-  --bg: #0E0E10;
-  --panel: #141316;
-  --card: #1C1B1F;
-  --line: #3A3426;
-  --gold: #E2C267;
-  --gold-dark: #C9A227;
-  --cream: #F6F0E2;
-  --text: #EDE6D6;
-  --muted: #A59C88;
-  --soft: #C9BFA8;
-}
+    <!-- bootstrap grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/font-awesome.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css">
+    <!-- fancybox css -->
+    <link rel="stylesheet" href="css/plugins/fancybox.min.css">
+    <!-- ashley scss -->
+    <link rel="stylesheet" href="css/style.css">
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--bg);
-  font-family: Inter, system-ui, sans-serif;
-  color: var(--text);
-  display: flex;
-  justify-content: center;
-}
-a { color: var(--gold); }
-a:hover { color: #F3DC97; }
+    <!-- page name + SEO -->
+    <title>CHAYAMANA 2026 | MCPAS – Mahanama College Photographic Art Society</title>
+    <link rel="icon" type="image/png" href="Pics/IMG_8922.PNG">
+    <meta name="description" content="CHAYAMANA is the annual inter-school photography exhibition and competition organized by MCPAS, the Mahanama College Photographic Art Society, Colombo, Sri Lanka.">
+    <link rel="canonical" href="https://mcpas.mcmu.lk/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcpas.mcmu.lk/">
+    <meta property="og:title" content="CHAYAMANA 2026 | MCPAS – Mahanama College Photographic Art Society">
+    <meta property="og:description" content="The annual inter-school photography exhibition and competition by MCPAS, Mahanama College, Colombo.">
+    <meta property="og:image" content="https://mcpas.mcmu.lk/Pics/chayamana%20logo.png">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://mcpas.mcmu.lk/#org",
+          "name": "Mahanama College Photographic Art Society (MCPAS)",
+          "alternateName": ["MCPAS", "CHAYAMANA"],
+          "url": "https://mcpas.mcmu.lk/",
+          "logo": "https://mcpas.mcmu.lk/Pics/chayamana%20logo.png",
+          "sameAs": ["https://www.instagram.com/mcpas.official/"]
+        },
+        {
+          "@type": "Event",
+          "name": "CHAYAMANA 2026 – Physical Competition",
+          "startDate": "2026-12-05",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Mahanama College",
+            "address": "Colombo 03, Sri Lanka"
+          },
+          "organizer": { "@id": "https://mcpas.mcmu.lk/#org" },
+          "url": "https://mcpas.mcmu.lk/physical-competition.html"
+        }
+      ]
+    }
+    </script>
 
-.page {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  min-height: 100vh;
-  overflow: hidden;
-  background: var(--panel);
+<style>
+.mil-preloader-animation .mil-animation-1 {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeOutText 0.6s ease forwards;
+    animation-delay: 2s;
 }
-
-/* ---------- 1. Envelope ---------- */
-.env {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  background: #0A0A0B;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 34px;
-  padding: 20px;
+.mil-reveal-box {
+    opacity: 0;
+    animation: showThenHideBox 1.4s ease forwards;
+    animation-delay: 2.6s;
+    transform-origin: left;
 }
-.env-hint {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 24px;
-  color: var(--gold);
-  text-align: center;
+.mil-preloader-animation .mil-animation-2 img {
+    opacity: 0;
+    animation: fadeInLogo 0.8s ease forwards;
+    animation-delay: 4.2s;
 }
-.env-btn {
-  position: relative;
-  width: 340px;
-  max-width: 90vw;
-  height: 230px;
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-  perspective: 900px;
-  animation: envFloat 3s ease-in-out infinite;
+@keyframes fadeOutText {
+    to { opacity: 0; visibility: hidden; }
 }
-.env-back {
-  position: absolute; inset: 0; z-index: 0;
-  background: #16151A;
-  border: 1px solid #5A4C2A;
-  border-radius: 8px;
+@keyframes showThenHideBox {
+    0% { opacity: 1; transform: scaleX(1); }
+    60% { opacity: 1; transform: scaleX(1); }
+    100% { opacity: 1; transform: scaleX(0); }
 }
-.letter {
-  position: absolute;
-  left: 22px; right: 22px; top: 16px;
-  height: 196px;
-  z-index: 2;
-  background: var(--cream);
-  border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 26px;
-  gap: 6px;
-  color: #141210;
-}
-.letter-small { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #6B5A2E; }
-.letter-title { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 32px; letter-spacing: 4px; }
-.letter-sub { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #4A4335; }
-.env-pocket {
-  position: absolute; inset: 0; z-index: 3;
-  background: #1F1D22;
-  border: 1px solid #5A4C2A;
-  border-radius: 8px;
-  clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
-}
-.flap {
-  position: absolute; left: 0; right: 0; top: 0;
-  height: 62%;
-  z-index: 4;
-  background: #2A2722;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  border-radius: 8px 8px 0 0;
-  transform-origin: top center;
-}
-.seal {
-  position: absolute;
-  left: 50%; top: 58%;
-  z-index: 5;
-  width: 66px; height: 66px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: var(--gold-dark);
-  border: 3px solid var(--gold);
-  display: flex; align-items: center; justify-content: center;
-  animation: sealGlow 1.8s infinite;
-}
-.tap {
-  margin: 0;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--soft);
-  animation: blink 1.6s ease-in-out infinite;
+@keyframes fadeInLogo {
+    to { opacity: 1; }
 }
 
-/* Envelope opening sequence (class "open" is added by script.js) */
-.env.open { pointer-events: none; animation: overlayOut .7s 2.1s ease-in forwards; }
-.env.open .env-btn { animation: none; }
-.env.open .seal { animation: sealPop .5s ease-in forwards; }
-.env.open .flap { animation: flapOpen .7s .35s ease-in-out forwards; }
-.env.open .letter { animation: letterUp .8s 1.05s cubic-bezier(.2,.7,.2,1) forwards; }
-.env.open .env-hint, .env.open .tap { animation: hintOut .3s forwards; }
-
-/* ---------- 2. Hero ---------- */
-.hero { position: relative; height: 620px; overflow: hidden; background: #1B1A1E; }
-.hero-bg {
-  position: absolute; inset: 0;
-  background: #22211F url('images/cover.jpg') center / cover no-repeat;
-  animation: kenBurns 14s ease-in-out infinite alternate;
+/* Photo slideshow: fades between images every 5 seconds */
+.mil-photo-slideshow {
+    position: relative;
+    overflow: hidden;
 }
-.hero-shade {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(14,14,16,.2) 0%, rgba(14,14,16,.55) 55%, var(--panel) 100%);
+.mil-slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
-.flash { position: absolute; inset: 0; background: #fff; opacity: 0; pointer-events: none; animation: flash 6s 5s infinite; }
-.hero-text {
-  position: absolute; left: 0; right: 0; bottom: 56px;
-  padding: 0 32px;
-  display: flex; flex-direction: column; align-items: center;
-  text-align: center; gap: 14px;
-}
-.eyebrow { margin: 0; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--soft); }
-.script { margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: var(--gold); }
-.title-wrap { position: relative; overflow: hidden; padding: 4px 8px; }
-h1 {
-  margin: 0;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: clamp(44px, 14vw, 64px);
-  line-height: 1;
-  letter-spacing: 6px;
-  color: var(--cream);
-}
-.sweep {
-  position: absolute; top: 0; bottom: 0; left: -40%;
-  width: 30%;
-  background: linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,236,180,.55) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-18deg);
-  animation: sweep 4s 4s ease-in-out infinite;
-}
-.subtitle { margin: 0; font-size: 15px; letter-spacing: 3px; text-transform: uppercase; color: var(--soft); }
-
-/* ---------- 3. Message ---------- */
-.message { padding: 8px 32px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; }
-.spin { animation: spinSlow 18s linear infinite; }
-.message-text { margin: 0; font-family: 'Cormorant Garamond', serif; font-size: 21px; line-height: 1.5; }
-.signature { margin: 0; font-size: 13px; color: var(--muted); }
-
-/* ---------- 4. Details ---------- */
-.details { padding: 0 24px 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 18px 16px;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.bob { animation: bounce 2.4s ease-in-out infinite; }
-.label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-.value { font-size: 16px; font-weight: 600; color: var(--cream); }
-
-/* ---------- 5. Gallery ---------- */
-.gallery { padding-bottom: 44px; display: flex; flex-direction: column; gap: 16px; }
-.section-label { margin: 0; text-align: center; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); }
-.filmstrip { overflow: hidden; background: #0A0A0B; padding: 14px 0; border-top: 6px dashed #2A2722; border-bottom: 6px dashed #2A2722; }
-.film { display: flex; gap: 12px; width: max-content; animation: film 22s linear infinite; }
-.frame {
-  width: 150px; height: 110px; flex: none;
-  border-radius: 4px;
-  background-color: #2A2824;
-  background-size: cover;
-  background-position: center;
+.mil-slide-img.mil-slide-active {
+    opacity: 1;
 }
 
-/* ---------- 6. Countdown ---------- */
-.countdown { padding: 0 24px 44px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.count-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; width: 100%; }
-.count-box {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 14px 4px;
-  display: flex; flex-direction: column; align-items: center; gap: 4px;
+/* Circle photo: fills a decorative ring with a real photo */
+.mil-team-list {
+    position: relative;
 }
-.num { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 600; line-height: 1; color: var(--gold); }
-.num.tick { animation: tick .35s ease-out; }
-.unit { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
-
-/* ---------- 7. Buttons ---------- */
-.actions { padding: 0 32px 48px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-.btn-main {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%; min-height: 56px;
-  border-radius: 40px;
-  background: var(--gold);
-  color: #141210;
-  font-weight: 600; font-size: 16px;
-  text-decoration: none;
-  transition: transform .25s;
+.mil-circle-photo {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    pointer-events: none;
 }
-.btn-main:hover { color: #141210; transform: scale(1.06); }
-.pulse { animation: pulse 2s infinite; }
-.btn-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; width: 100%; }
-.btn-ghost {
-  display: flex; align-items: center; justify-content: center;
-  min-height: 48px;
-  border: 1px solid var(--gold);
-  border-radius: 40px;
-  color: var(--gold);
-  font-size: 14px; font-weight: 500;
-  text-decoration: none;
-  text-align: center;
-  transition: background .25s, color .25s;
-}
-.btn-ghost:hover { background: var(--gold); color: #141210; }
-
-/* ---------- 8. Footer ---------- */
-.footer { padding: 28px 32px 40px; border-top: 1px solid #2A2722; text-align: center; }
-.footer p { margin: 0 0 8px; font-size: 13px; color: var(--soft); }
-.footer .small { font-size: 12px; color: var(--muted); }
-.replay {
-  margin-top: 10px;
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  border-radius: 30px;
-  padding: 10px 18px;
-  font: 500 12px Inter, sans-serif;
-  cursor: pointer;
-}
-.replay:hover { color: var(--gold); border-color: var(--gold); }
-
-/* ---------- Reveal-on-open (class "go" is added by script.js) ---------- */
-.up { opacity: 0; }
-.page.go .up { animation: fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards; }
-.d1 { animation-delay: 2.4s !important; } .d2 { animation-delay: 2.7s !important; } .d3 { animation-delay: 3s !important; }
-.d4 { animation-delay: 3.3s !important; } .d5 { animation-delay: 3.6s !important; } .d6 { animation-delay: 3.9s !important; }
-.d7 { animation-delay: 4.2s !important; } .d8 { animation-delay: 4.5s !important; } .d9 { animation-delay: 4.8s !important; }
-.spin.up { animation: none; }
-.page.go .spin.up { animation: fadeUp .9s 3.3s forwards, spinSlow 18s 4.2s linear infinite; }
-
-/* ---------- Keyframes ---------- */
-@keyframes envFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-@keyframes sealGlow { 0%,100% { box-shadow: 0 0 0 0 rgba(226,194,103,.6); } 50% { box-shadow: 0 0 0 14px rgba(226,194,103,0); } }
-@keyframes sealPop { 0% { transform: translate(-50%,-50%) scale(1); } 40% { transform: translate(-50%,-50%) scale(1.25); } 100% { transform: translate(-50%,-50%) scale(0) rotate(90deg); opacity: 0; } }
-@keyframes flapOpen { 0% { transform: rotateX(0); z-index: 4; } 50% { z-index: 4; } 51% { z-index: 1; } 100% { transform: rotateX(180deg); z-index: 1; } }
-@keyframes letterUp { to { transform: translateY(-150px); } }
-@keyframes hintOut { to { opacity: 0; transform: translateY(10px); } }
-@keyframes overlayOut { 0% { opacity: 1; transform: scale(1); } 99% { opacity: 0; transform: scale(1.12); visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
-@keyframes blink { 0%,100% { opacity: .45; } 50% { opacity: 1; } }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-@keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.12); } }
-@keyframes sweep { 0% { left: -40%; } 60%,100% { left: 140%; } }
-@keyframes spinSlow { to { transform: rotate(360deg); } }
-@keyframes film { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(226,194,103,.65); } 70% { box-shadow: 0 0 0 18px rgba(226,194,103,0); } 100% { box-shadow: 0 0 0 0 rgba(226,194,103,0); } }
-@keyframes flash { 0%,92%,100% { opacity: 0; } 95% { opacity: .85; } }
-@keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-@keyframes tick { from { transform: translateY(-6px); opacity: .3; } to { transform: none; opacity: 1; } }
-
-/* Respect users who turn off motion */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; animation-delay: 0s !important; }
+.mil-circle-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* EXCO avatar styled as a camera lens */
+.mil-review-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 18px auto 38px auto;
+    box-shadow:
+        0 0 0 4px #111,
+        0 0 0 6px #ff9800,
+        0 0 0 13px #1b1b1b,
+        0 0 0 14px rgba(0, 0, 0, .25),
+        0 14px 30px rgba(0, 0, 0, .25);
+}
+
+.mil-review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mil-rules-badge {
+    display: flex;
+    flex: 0 0 auto;
+    width: min(460px, 70vw);
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: visible;
+}
+
+.mil-rules-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mil-rules-badge img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+}
+
+@media screen and (max-width: 768px) {
+    .mil-rules-badge {
+        width: min(340px, 78vw);
+    }
+}
+
+.mil-partners-black {
+    display: flex;
+    min-height: 110px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.mil-partners-black .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.mil-partners-black .swiper-container {
+    height: 80px;
+}
+
+.mil-partners-black .swiper-wrapper,
+.mil-partners-black .swiper-slide,
+.mil-partners-black .mil-partner-frame {
+    height: 100%;
+}
+
+.mil-partners-black .mil-partner-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mil-partners-black .mil-partner-frame img {
+    max-height: 70px;
+    object-fit: contain;
+}
 </style>
 </head>
+
 <body>
-<main class="page" id="page">
 
-  <!-- ===== 1. ENVELOPE OPENING ===== -->
-  <div class="env" id="envelope">
-    <p class="env-hint">You have received an invitation</p>
-    <button class="env-btn" id="openBtn" aria-label="Open the invitation">
-      <div class="env-back"></div>
-      <div class="letter">
-        <span class="letter-small">You are invited</span>
-        <span class="letter-title">CHAYAMANA</span>
-        <span class="letter-sub">Photographic Exhibition 2026</span>
-      </div>
-      <div class="env-pocket"></div>
-      <div class="flap"></div>
-      <div class="seal">
-        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#3A2E10" stroke-width="1.8" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="7"/><path d="M20 3 L27 13M35 12 L27 20M35 28 L23 26M20 37 L13 27M5 28 L13 20M5 12 L17 14"/></svg>
-      </div>
-    </button>
-    <p class="tap">Tap the seal to open</p>
-  </div>
+    <!-- wrapper -->
+    <div class="mil-wrapper" id="top">
 
-  <!-- ===== 2. HERO / COVER ===== -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-shade"></div>
-    <div class="flash"></div>
-    <div class="hero-text">
-      <p class="up d1 eyebrow">Mahanama College Photographic Art Society</p>
-      <p class="up d2 script">cordially invites you to</p>
-      <div class="up d3 title-wrap">
-        <h1>CHAYAMANA</h1>
-        <div class="sweep"></div>
-      </div>
-      <p class="up d4 subtitle">Photographic Exhibition 2026</p>
+        <!-- cursor -->
+        <div class="mil-ball">
+            <span class="mil-icon-1">
+                <svg viewBox="0 0 128 128">
+                    <path d="M106.1,41.9c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2L116.8,61H11.2l14.9-14.9c1.2-1.2,1.2-3.1,0-4.2	c-1.2-1.2-3.1-1.2-4.2,0l-20,20c-1.2,1.2-1.2,3.1,0,4.2l20,20c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2	L11.2,67h105.5l-14.9,14.9c-1.2,1.2-1.2,3.1,0,4.2c0.6,0.6,1.4,0.9,2.1,0.9s1.5-0.3,2.1-0.9l20-20c1.2-1.2,1.2-3.1,0-4.2L106.1,41.9	z" />
+                </svg>
+            </span>
+            <div class="mil-more-text">More</div>
+            <div class="mil-choose-text">Сhoose</div>
+        </div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <div class="mil-preloader" style="background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('chayamana-2024-awards.jpg'); background-size: cover; background-position: center;">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-h3 mil-muted"><b>Light.</b></p>
+                    <p class="mil-h3 mil-muted mil-thin">Vision.</p>
+                    <p class="mil-h3 mil-muted"><b>Expression.</b></p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+        <!-- scrollbar progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+        <!-- scrollbar progress end -->
+
+        <!-- menu -->
+
+        <div class="mil-menu-frame">
+            <!-- frame clone -->
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo"><img loading="lazy" src="Pics/IMG_8922.PNG" alt="MCPAS logo" style="height: 40px; width: auto;"></a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <!-- frame clone end -->
+            <div class="container">
+                <div class="mil-menu-content">
+                    <div class="row">
+                        <div class="col-xl-5">
+
+                            <nav class="mil-main-menu" id="swupMenu">
+                                <ul>
+                                    <li class="mil-has-children mil-active">
+                                        <a href="#.">Homepage</a>
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="physical-competition.html" data-no-swup>Physical Competition</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Gallery</a>
+                                        <ul>
+                                            <li><a href="portfolio-1.html">Gallery</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="mil-has-children">
+                                        <a href="#.">Rules And Regulations</a>
+                                        <ul>
+                                            <li><a data-no-swup href="Chayamana_2026-Rules_and_Regulations_compressed%20copy.pdf.pdf" target="_blank" rel="noopener">View PDF</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-xl-7">
+
+                            <div class="mil-menu-right-frame">
+                                <div class="mil-animation-in">
+                                    <div class="mil-animation-frame">
+                                        <div class="mil-animation mil-position-1 mil-scale" data-value-1="2" data-value-2="2"></div>
+                                    </div>
+                                </div>
+                                <div class="mil-menu-right">
+                                    <div class="row">
+                                        <div class="col-lg-8 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Projects</h6>
+
+                                            <ul class="mil-menu-list">
+                                                <li><a href="portfolio-1.html" class="mil-light-soft">Gallery</a></li>
+                                                <li><a href="physical-competition.html" data-no-swup class="mil-light-soft">Physical Competition</a></li>
+                                                <li><a href="#rules" class="mil-light-soft">Submission</a></li>
+                                                <li><a href="Chayamana_2026-Rules_and_Regulations_compressed%20copy.pdf" data-no-swup class="mil-light-soft" target="_blank" rel="noopener">Rules and Regulations</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <div class="mil-divider mil-mb-60"></div>
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Chamathka Sadaru</h6>
+
+                                            <p class="mil-light-soft mil-up">Project Chair-person <a class="mil-no-wrap" href="tel:+94778400503">0778400503</a></p>
+
+                                        </div>
+                                        <div class="col-lg-4 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-mb-30">Pavan Bandara</h6>
+
+                                            <p class="mil-light-soft">Project Chair-person <a class="mil-no-wrap" href="tel:+94706088879">0706088879</a></p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+
+        <!-- curtain -->
+        <div class="mil-curtain"></div>
+        <!-- curtain end -->
+
+        <!-- frame -->
+        <div class="mil-frame">
+            <div class="mil-frame-top">
+                <a href="index.html" class="mil-logo"><img src="Pics/IMG_8922.PNG" alt="MCPAS logo" style="height: 40px; width: auto;"></a>
+                <div class="mil-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+            <div class="mil-frame-bottom">
+                <div class="mil-current-page"></div>
+                <div class="mil-back-to-top">
+                    <a href="#top" class="mil-link mil-dark mil-arrow-place">
+                        <span>Back to top</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- frame end -->
+
+        <!-- content -->
+        <div class="mil-content">
+            <div id="swupMain" class="mil-main-transition">
+
+                <!-- ============ Photography theme (kept inside swupMain so it loads with page transitions) ============ -->
+                <style>
+                    :root { --hp-accent: #ff9800; --hp-mono: "Courier New", ui-monospace, monospace; }
+
+                    .hp-sr {
+                        position: absolute; width: 1px; height: 1px; overflow: hidden;
+                        clip: rect(0 0 0 0); white-space: nowrap;
+                    }
+
+                    /* ---- Hero ---- */
+                    .mil-banner { position: relative; overflow: hidden; }
+
+                    .hp-leak {
+                        position: absolute;
+                        top: -25%;
+                        right: -12%;
+                        z-index: 1;
+                        width: 60vw;
+                        height: 60vw;
+                        max-width: 900px;
+                        max-height: 900px;
+                        border-radius: 50%;
+                        background: radial-gradient(circle, rgba(255,152,0,.18) 0%, rgba(255,72,0,.07) 40%, transparent 70%);
+                        filter: blur(30px);
+                        mix-blend-mode: screen;
+                        pointer-events: none;
+                        animation: hp-leak 16s ease-in-out infinite alternate;
+                    }
+
+                    .hp-kicker {
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        margin: 0 0 28px;
+                        color: rgba(255,255,255,.6);
+                        font-size: 12px;
+                        font-weight: 500;
+                        letter-spacing: .3em;
+                        text-transform: uppercase;
+                    }
+                    .hp-kicker::before {
+                        width: 40px;
+                        height: 1px;
+                        background: var(--hp-accent);
+                        content: "";
+                    }
+                    .hp-kicker i {
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: var(--hp-accent);
+                    }
+
+                    .hp-h1 { margin: 0 0 34px; line-height: 0; }
+                    .hp-h1 img { max-width: 100%; height: auto; }
+
+                    /* Event information bar */
+                    .hp-meta {
+                        display: flex;
+                        max-width: 780px;
+                        margin-top: 56px;
+                        padding-top: 28px;
+                        border-top: 1px solid rgba(255,255,255,.12);
+                    }
+                    .hp-meta > div {
+                        padding: 0 40px;
+                        border-left: 1px solid rgba(255,255,255,.12);
+                    }
+                    .hp-meta > div:first-child { padding-left: 0; border-left: 0; }
+                    .hp-meta span {
+                        display: block;
+                        margin-bottom: 10px;
+                        color: rgba(255,255,255,.45);
+                        font-size: 11px;
+                        font-weight: 500;
+                        letter-spacing: .22em;
+                        text-transform: uppercase;
+                    }
+                    .hp-meta b {
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        letter-spacing: .02em;
+                    }
+                    .hp-meta b.hp-accent { color: var(--hp-accent); }
+
+                    /* ---- Section eyebrows: "Frame 01, 02..." ---- */
+                    .hp-eyebrow {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                        margin-bottom: 26px;
+                        color: #888;
+                        font-family: var(--hp-mono);
+                        font-size: 12px;
+                        letter-spacing: .22em;
+                        text-transform: uppercase;
+                    }
+                    .hp-eyebrow::before {
+                        width: 8px; height: 8px; border-radius: 50%;
+                        background: var(--hp-accent); content: "";
+                    }
+                    .hp-eyebrow b { color: var(--hp-accent); font-weight: 700; }
+                    .hp-eyebrow.hp-light { color: rgba(255,255,255,.6); }
+
+                    /* ---- About: instant-print photo ---- */
+                    .hp-print {
+                        position: relative;
+                        padding: 14px 14px 0;
+                        background: #fff;
+                        box-shadow: 0 28px 55px rgba(0,0,0,.18), 0 2px 6px rgba(0,0,0,.08);
+                        transform: rotate(-2.5deg);
+                        transition: transform .6s ease;
+                    }
+                    .hp-print:hover { transform: rotate(0deg) scale(1.01); }
+                    .hp-print::before {
+                        position: absolute;
+                        top: -15px;
+                        left: 50%;
+                        z-index: 4;
+                        width: 120px;
+                        height: 32px;
+                        background: rgba(255, 228, 170, .8);
+                        box-shadow: 0 2px 4px rgba(0,0,0,.08);
+                        transform: translateX(-50%) rotate(3deg);
+                        content: "";
+                    }
+                    .hp-datestamp {
+                        position: absolute;
+                        right: 16px;
+                        bottom: 14px;
+                        z-index: 3;
+                        color: #ff7a1a;
+                        font-family: var(--hp-mono);
+                        font-size: 15px;
+                        font-weight: 700;
+                        letter-spacing: .12em;
+                        text-shadow: 0 0 6px rgba(255,110,0,.75);
+                    }
+                    .hp-print-cap {
+                        margin: 0;
+                        padding: 20px 8px 24px;
+                        color: #333;
+                        font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+
+                    /* ---- Moving film strip band ---- */
+                    .hp-film {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 26px 0;
+                        background: #0b0b0b;
+                    }
+                    .hp-film::before,
+                    .hp-film::after {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        height: 10px;
+                        background: repeating-linear-gradient(to right, rgba(255,255,255,.88) 0 14px, transparent 14px 30px);
+                        border-radius: 2px;
+                        content: "";
+                    }
+                    .hp-film::before { top: 7px; }
+                    .hp-film::after { bottom: 7px; }
+                    .hp-film-track {
+                        display: flex;
+                        width: max-content;
+                        animation: hp-marquee 32s linear infinite;
+                    }
+                    .hp-film-track span {
+                        padding: 0 26px;
+                        color: rgba(255,255,255,.88);
+                        font-size: 20px;
+                        letter-spacing: .3em;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                    }
+                    .hp-film-track i {
+                        color: var(--hp-accent);
+                        font-style: normal;
+                    }
+
+                    /* ---- Chief judge: framed print with AF brackets ---- */
+                    .mil-judge-section .mil-team-card { position: relative; }
+                    .hp-af {
+                        position: absolute;
+                        inset: 18px;
+                        z-index: 2;
+                        pointer-events: none;
+                        transition: inset .4s ease;
+                        background:
+                            linear-gradient(#fff, #fff) top left / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) top left / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) top right / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) top right / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) bottom left / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) bottom left / 2px 30px no-repeat,
+                            linear-gradient(#fff, #fff) bottom right / 30px 2px no-repeat,
+                            linear-gradient(#fff, #fff) bottom right / 2px 30px no-repeat;
+                        opacity: .8;
+                    }
+                    .mil-team-card:hover .hp-af { inset: 30px; opacity: 1; }
+                    .hp-judge-role {
+                        margin: -40px 0 26px;
+                        color: #555;
+                        font-size: 15px;
+                    }
+                    .hp-exif {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        margin: 0 0 40px;
+                        padding: 0;
+                        list-style: none;
+                    }
+                    .hp-exif li {
+                        padding: 5px 10px;
+                        border: 1px solid rgba(0,0,0,.15);
+                        border-radius: 3px;
+                        color: #444;
+                        font-family: var(--hp-mono);
+                        font-size: 11px;
+                        letter-spacing: .1em;
+                    }
+
+                    /* ---- Hero spacing ---- */
+                    .mil-banner { height: auto !important; min-height: 100vh; }
+                    .mil-banner > .mi-invert-fix,
+                    .mil-banner .container { height: auto !important; min-height: 100vh; }
+                    .mil-banner .container { display: flex; align-items: center; }
+                    .mil-banner .mil-banner-content { width: 100%; padding: 190px 0 120px !important; }
+                    .mil-banner .hp-kicker { margin-bottom: 36px; }
+                    .mil-banner .hp-h1 { margin-bottom: 56px; }
+                    .mil-banner .mil-banner-content h3 { margin-bottom: 40px !important; }
+                    .mil-banner .mil-banner-content p.mil-light-soft {
+                        margin-bottom: 60px !important;
+                        line-height: 1.85;
+                    }
+                    .mil-banner .hp-meta { margin-top: 72px; }
+                    @media (max-width: 768px) {
+                        .mil-banner .mil-banner-content { padding: 140px 0 90px !important; }
+                        .mil-banner .hp-h1 { margin-bottom: 40px; }
+                        .mil-banner .mil-banner-content p.mil-light-soft { margin-bottom: 44px !important; }
+                    }
+
+                    /* ---- Rotating "Scroll down" circle: keep it visible on phones/tablets ---- */
+                    @media screen and (max-width: 1200px) {
+                        .mil-banner .mil-banner-content .mil-circle-text,
+                        .mil-banner .mil-circle-text {
+                            display: flex !important;
+                            position: relative !important;
+                            top: auto !important;
+                            right: auto !important;
+                            bottom: auto !important;
+                            left: auto !important;
+                            width: 130px !important;
+                            height: 130px !important;
+                            min-width: 130px;
+                            aspect-ratio: 1 / 1;
+                            flex-shrink: 0;
+                            margin: 60px 10px 0 auto !important;   /* auto on the left pushes it to the right side */
+                            border-radius: 50%;
+                            align-items: center;
+                            justify-content: center;
+                            opacity: 1 !important;
+                            visibility: visible !important;
+                        }
+                        .mil-banner .mil-circle-text .mil-ct-svg {
+                            display: block !important;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100% !important;
+                            height: 100% !important;
+                            transform: scale(1.9);
+                        }
+                        .mil-banner .mil-circle-text .mil-ct-svg text {
+                            fill: rgba(255,255,255,.7);
+                            font-size: 15px;
+                        }
+                        /* the arrow in the middle: a perfect round button */
+                        .mil-banner .mil-circle-text .mil-button {
+                            display: flex !important;
+                            position: relative;
+                            z-index: 2;
+                            width: 56px !important;
+                            height: 56px !important;
+                            min-width: 0 !important;
+                            padding: 0 !important;
+                            margin: 0 !important;
+                            border-radius: 50% !important;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .mil-banner .mil-circle-text .mil-button span { display: none; }
+                    }
+                    @media screen and (max-width: 768px) {
+                        .mil-banner .mil-banner-content .mil-circle-text,
+                        .mil-banner .mil-circle-text {
+                            width: 110px !important;
+                            height: 110px !important;
+                            min-width: 110px;
+                            margin: 50px 20px 0 auto !important;
+                        }
+                        .mil-banner .mil-circle-text .mil-button {
+                            width: 48px !important;
+                            height: 48px !important;
+                        }
+                    }
+
+                    @keyframes hp-leak {
+                        from { transform: translate(0, 0) scale(1); opacity: .7; }
+                        to   { transform: translate(-8vw, 6vh) scale(1.15); opacity: 1; }
+                    }
+                    @keyframes hp-blink { to { visibility: hidden; } }
+                    @keyframes hp-marquee { to { transform: translateX(-50%); } }
+
+                    @media (max-width: 768px) {
+                        .hp-meta { flex-wrap: wrap; row-gap: 22px; margin-top: 40px; }
+                        .hp-meta > div { width: 50%; padding: 0; border-left: 0; }
+                        .hp-film-track span { font-size: 15px; padding: 0 16px; }
+                        .hp-print { transform: rotate(-1.5deg); }
+                    }
+                    @media (prefers-reduced-motion: reduce) {
+                        .hp-leak, .hp-film-track { animation: none; }
+                    }
+                </style>
+
+                <!-- banner -->
+                <section class="mil-banner mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
+                            <div class="mil-animation mil-position-3 mil-scale" data-value-1="1.2" data-value-2=".1"></div>
+                        </div>
+
+                        <div class="mil-gradient"></div>
+
+                        <div class="container">
+                            <div class="mil-banner-content mil-up">
+                                <p class="hp-kicker">MCPAS presents <i></i> 2026 Edition</p>
+                                <h1 class="hp-h1">
+                                    <img src="Pics/chayamana logo.png" width="500" height="125" alt="CHAYAMANA">
+                                    <span class="hp-sr">CHAYAMANA – photography exhibition and competition by MCPAS, Mahanama College Photographic Art Society</span>
+                                </h1>
+                                <h3 class="mil-muted mil-mb-60">About <span class="mil-thin">CHAYAMANA</span></h3>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-8">
+                                        <p class="mil-light-soft mil-mb-80">CHAYAMANA is the flagship annual photography exhibition and competition organized by the Mahanama College Photographic Art Society (MCPAS). It provides a platform for young photographers across Sri Lanka to showcase their creativity, share unique perspectives, and celebrate the art of photography while promoting artistic excellence, technical skill, and innovation.</p>
+                                    </div>
+                                </div>
+
+                                <div class="mil-competition-links">
+                                    <a href="Chayamana_2026-Rules_and_Regulations_compressed.pdf" target="_blank" rel="noopener" data-no-swup class="mil-button mil-arrow-place">
+                                        <span>Rules and Regulations</span>
+                                    </a>
+                                    <a href="physical-competition.html" data-no-swup class="mil-button mil-arrow-place">
+                                        <span>Physical Competition</span>
+                                    </a>
+                                </div>
+
+                                <div class="hp-meta">
+                                    <div><span>Physical Competition</span><b>05 Dec 2026</b></div>
+                                    <div><span>Countdown</span><b class="hp-accent" id="hp-days">Coming soon</b></div>
+                                    <div><span>Organized by</span><b>MCPAS</b></div>
+                                </div>
+
+                                <a href="#rules" data-no-swup data-native-anchor class="mil-circle-text" aria-label="Scroll to Rules and Regulations">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve" class="mil-ct-svg mil-rotate" data-value="360">
+                                        <defs>
+                                            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                                        </defs>
+                                        <circle cx="150" cy="100" r="75" fill="none" />
+                                        <g>
+                                            <use xlink:href="#circlePath" fill="none" />
+                                            <text style="letter-spacing: 4px">
+                                                <textPath xlink:href="#circlePath">Scroll down for Registrations-</textPath>
+                                            </text>
+                                        </g>
+                                    </svg>
+                                    <span class="mil-button mil-arrow-place mil-icon-button mil-arrow-down" aria-hidden="true"></span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- soft light leak -->
+                    <div class="hp-leak" aria-hidden="true"></div>
+                </section>
+                <!-- banner end -->
+
+                <!-- about -->
+                <section id="about">
+                    <div class="container mil-p-120-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-6 col-xl-5">
+
+                                <div class="mil-mb-90">
+                                    <span class="hp-eyebrow mil-up">Frame 01 · <b>Our story</b></span>
+                                    <h2 class="mil-mb-60"><span class="mil-thin">History<br> OF</span> <b>CHAYAMANA</b></h2>
+                                    <p class="mil-up mil-mb-60">Since its inception, CHAYAMANA has evolved from a school photography exhibition into one of Sri Lanka's respected inter-school photography events. Organized annually by the Mahanama College Photographic Art Society (MCPAS), the exhibition has provided countless young photographers with the opportunity to display their work, receive professional recognition, and develop their artistic vision.</p>
+
+                                    <p class="mil-up mil-mb-60">Each edition reflects the dedication of the organizing committee, the passion of participating photographers, and the continued growth of photographic art within the school community. While embracing modern techniques and evolving styles, CHAYAMANA remains committed to its founding purpose — promoting creativity, encouraging excellence, and inspiring a lifelong appreciation for photography.</p>
+
+                                    <div class="mil-about-quote">
+                                        <div class="mil-avatar mil-up">
+                                            <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg" alt="CHAYAMANA exhibition">
+                                        </div>
+                                        <h6 class="mil-quote mil-up">The CHAYAMANA <span class="mil-thin">photographic exhibition was established under the leadership of</span> <b>Sethika Rathnayake</b></h6>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-5">
+
+                                <div class="mil-about-photo mil-mb-90">
+                                    <div class="mil-lines-place"></div>
+                                    <div class="mil-up">
+                                        <div class="hp-print">
+                                            <div class="mil-img-frame mil-photo-slideshow" style="padding-bottom: 120%;">
+                                                <img loading="lazy" src="Pics/FB_IMG_1783184384167.jpg.jpeg" class="mil-slide-img mil-slide-active" alt="CHAYAMANA exhibition">
+                                                <span class="hp-datestamp" aria-hidden="true">MCPAS '26</span>
+                                            </div>
+                                            <p class="hp-print-cap">Where it all began</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- about end -->
+
+                <!-- moving film strip -->
+                <div class="hp-film" aria-hidden="true">
+                    <div class="hp-film-track">
+                        <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Capture the moment <i>◉</i></span>
+                        <span>Light <i>◉</i></span><span>Vision <i>◉</i></span><span>Expression <i>◉</i></span><span>CHAYAMANA 2026 <i>◉</i></span><span>MCPAS <i>◉</i></span><span>Capture the moment <i>◉</i></span>
+                    </div>
+                </div>
+                <!-- film strip end -->
+
+                <!-- submissions -->
+                <section id="rules" class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="mil-animation-frame">
+                            <div class="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style="top: 300px; right: -100px"></div>
+                            <div class="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style="left: 150px"></div>
+                        </div>
+
+                        <div class="container mil-p-120-0">
+
+                            <div class="mil-mb-120">
+                                <div class="mil-complex-text mil-rules-title justify-content-center mil-up mil-mb-15">
+                                    <span class="hp-eyebrow hp-light">Frame 02 · <b>Call for entries</b></span>
+                                    <span class="mil-rules-badge"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></span>
+                                    <h2 class="mil-h1 mil-muted mil-center">School Registrations<span class="mil-thin">are open now</span></h2>
+                                </div>
+                                <div class="mil-complex-text justify-content-center mil-up">
+                                    <div class="mil-center mil-up mil-mb-30">
+                                        <a data-no-swup href="registration.html" target="_blank" rel="noopener" class="mil-button mil-arrow-place">
+                                            <span>Click here for Registrations</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+                <!-- submissions end -->
+
+                <!-- chief judge -->
+                <section class="mil-judge-section">
+                    <div class="container mil-p-120-30">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-5 col-xl-4">
+
+                                <div class="mil-mb-90">
+                                    <span class="hp-eyebrow mil-up">Frame 03 · <b>The judge</b></span>
+                                    <h2 class="mil-up mil-mb-60"><strong>A Visionary Perspective</strong></h2>
+                                    <p class="mil-up hp-judge-role"><b>Mr. Sanka Sammana</b> — President of the National Photographic Art Society of Sri Lanka (NPAS)</p>
+
+                                    <p class="mil-up mil-mb-30">An accomplished figure in the field of photography, Mr. Sanka Sammana brings a wealth of experience, expertise and passion to CHAYAMANA 2026. As President of the National Photographic Art Society of Sri Lanka, he has made significant contributions to the photographic community, inspiring photographers and supporting the growth of photographic art in Sri Lanka.</p>
+
+                                    <p class="mil-up mil-mb-30">For CHAYAMANA 2026, he joins us as our Chief Judge and Event Coordinator, bringing his distinguished expertise and vision to ensure a meaningful and inspiring celebration of photography.</p>
+
+                                    <ul class="hp-exif mil-up" aria-label="Distinctions and affiliations">
+                                        <li>EFIAP</li><li>GPU CR 2</li><li>GPU Aphrodite</li><li>GAPU</li><li>LPSS</li><li>FNAPSL</li><li>ANPAS</li><li>AISLP</li>
+                                    </ul>
+
+                                    <h4 class="mil-up"><span class="mil-thin">Meet our</span><br><span class="mil-strong">Chief Judge.</span></h4>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-team-list">
+                                    <div class="mil-lines-place"></div>
+
+                                    <div class="row mil-mb-60 justify-content-center">
+                                        <div class="col-12 col-md-10 col-lg-9">
+
+                                            <div class="mil-team-card mil-up mil-mb-30">
+                                                <img loading="lazy" src="Pics/Exco/Mr-Sanka-Sammana.jpg.jpeg" alt="Mr. Sanka Sammana, Chief Judge of CHAYAMANA 2026">
+                                                <span class="hp-af" aria-hidden="true"></span>
+                                                <div class="mil-description">
+                                                    <div class="mil-secrc-text">
+                                                        <h5 class="mil-muted mil-mb-5">Sanka</h5>
+                                                        <p class="mil-link mil-light-soft mil-mb-10">Sammana</p>
+                                                        <ul class="mil-social-icons mil-center">
+                                                            <li><a href="https://www.facebook.com/share/1GiiQNF1Se/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" data-no-swup class="social-icon" aria-label="Visit Sanka Sammana on Facebook"> <i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- chief judge end -->
+
+                <!-- exco -->
+                <section class="mil-soft-bg">
+                    <div class="container mil-p-120-120">
+
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <span class="mil-suptitle mil-suptitle-right mil-suptitle-dark mil-up">Meet<br><span class="mil-thin">Our EXCO Panel</span></span>
+                            </div>
+                        </div>
+
+                        <div class="mil-center"><span class="hp-eyebrow mil-up">Frame 04 · <b>Behind the lens</b></span></div>
+                        <h2 class="mil-center mil-up mil-mb-60">Meet <span class="mil-thin">Our</span> <br>EXCO<span class="mil-thin"> Panel</span></h2>
+
+                        <div class="mil-revi-pagination mil-up mil-mb-60"></div>
+
+                        <div class="row mil-relative justify-content-center">
+                            <div class="col-lg-8">
+
+                                <div class="mil-slider-nav mil-soft mil-reviews-nav mil-up">
+                                    <div class="mil-slider-arrow mil-prev mil-revi-prev mil-arrow-place"></div>
+                                    <div class="mil-slider-arrow mil-revi-next mil-arrow-place"></div>
+                                </div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="mil-quote-icon mil-up">
+                                    <path d="M 13.5 10 A 8.5 8.5 0 0 0 13.5 27 A 8.5 8.5 0 0 0 18.291016 25.519531 C 17.422273 29.222843 15.877848 31.803343 14.357422 33.589844 C 12.068414 36.279429 9.9433594 37.107422 9.9433594 37.107422 A 1.50015 1.50015 0 1 0 11.056641 39.892578 C 11.056641 39.892578 13.931586 38.720571 16.642578 35.535156 C 19.35357 32.349741 22 27.072581 22 19 A 1.50015 1.50015 0 0 0 21.984375 18.78125 A 8.5 8.5 0 0 0 13.5 10 z M 34.5 10 A 8.5 8.5 0 0 0 34.5 27 A 8.5 8.5 0 0 0 39.291016 25.519531 C 38.422273 29.222843 36.877848 31.803343 35.357422 33.589844 C 33.068414 36.279429 30.943359 37.107422 30.943359 37.107422 A 1.50015 1.50015 0 1 0 32.056641 39.892578 C 32.056641 39.892578 34.931586 38.720571 37.642578 35.535156 C 40.35357 32.349741 43 27.072581 43 19 A 1.50015 1.50015 0 0 0 42.984375 18.78125 A 8.5 8.5 0 0 0 34.5 10 z" fill="#000000" />
+                                </svg>
+
+                                <div class="swiper-container mil-reviews-slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-03-10 at 13.06.12.jpeg" alt="Virul Bonula, Club President">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Virul Bonula</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club President</p>
+                                                <p class="mil-text-xl mil-up">Virul Bonula joined MCPAS in 2023 and has since grown into one of the club's most dedicated members, now proudly serving as Club President. His leadership, passion for the club's mission, and commitment to bringing members together have helped shape MCPAS into a stronger, more connected community.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0267 (1).jpg" alt="Inura Samarasinghe, Club Secretary">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Inura Samarasinghe</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Secretary</p>
+                                                <p class="mil-text-xl mil-up">Inura Samarasinghe has been an active member of MCPAS since 2023. Currently serving as Club Secretary, he ensures the club runs smoothly through his strong organizational skills and steady commitment to its mission.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0259 (1).jpg" alt="Senuda Disas, Club Treasurer">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Senuda Disas</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Treasurer</p>
+                                                <p class="mil-text-xl mil-up">Senuda Disas has been an active member of MCPAS since 2024. Currently serving as Club Treasurer, he manages the club's finances with diligence and integrity, ensuring transparency and sound financial planning.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0248.jpg" alt="Chamathka Sadaru, Club Vice President">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Chamathka Sadaru</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice President</p>
+                                                <p class="mil-text-xl mil-up">Chamathka Sadaru joined MCPAS as an active member in 2025 and now serves as Club Vice President. He supports the club's leadership with commitment and a clear focus on advancing its goals.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0272.jpg" alt="Pavan Bandara, Club Vice Secretary">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Pavan Bandara</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice Secretary</p>
+                                                <p class="mil-text-xl mil-up">Pavan Bandara joined MCPAS in 2025 and now serves as Vice Secretary. He supports the club's administrative operations with diligence and a strong commitment to its goals.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/IMG_0312.jpg" alt="Janidu Ayodhya, Club Vice Treasurer">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Janidu Ayodhya</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Vice Treasurer</p>
+                                                <p class="mil-text-xl mil-up">Janidu Ayodhya joined MCPAS in 2025 and now serves as Vice Treasurer. He assists in managing the club's finances with diligence and a strong sense of accountability.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-07-20 at 9.17.09 PM.jpeg" alt="Nikesh Guruge, Club Coordinator">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Nikesh Guruge</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Coordinator</p>
+                                                <p class="mil-text-xl mil-up">Nikesh joined MCPAS in 2025 and now serves as Coordinator. He is dedicated to the club's success and works tirelessly to support its initiatives.</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="mil-review-frame mil-center" data-swiper-parallax="-200" data-swiper-parallax-opacity="0">
+                                                <div class="mil-review-avatar">
+                                                    <img loading="lazy" src="Pics/Exco/WhatsApp Image 2026-09-10 at 2.55.40 PM.jpeg" alt="Navinu Brandi, Club Coordinator">
+                                                </div>
+                                                <h5 class="mil-up mil-mb-10">Navinu Brandi</h5>
+                                                <p class="mil-mb-5 mil-upper mil-up mil-mb-30">Club Coordinator</p>
+                                                <p class="mil-text-xl mil-up">Navinu joined MCPAS in 2025 and now serves as Coordinator. He plays a vital role in organizing club activities and ensuring smooth communication between members.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- exco end -->
+
+                <!-- partners -->
+                <div class="mil-soft-bg mil-partners-black">
+                    <div class="container">
+                        <div class="swiper-container mil-infinite-show mil-up">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="MCPAS"></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/chayamana logo.png" alt="CHAYAMANA"></a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#." class="mil-partner-frame" style="width: 150px;"><img loading="lazy" src="Pics/IMG_8923.PNG" alt="MCPAS"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- partners end -->
+
+                <!-- map -->
+                <div class="mil-map-frame mil-up">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mahanama+College+Colombo+03" target="_blank" rel="noopener" data-no-swup aria-label="Open Mahanama College in Google Maps" style="display:block; position:relative; width:100%; height:100%; z-index:1;">
+                        <div class="mil-map" style="width:100%; height:100%;">
+                            <iframe src="https://www.google.com/maps?q=Mahanama+College+Colombo+03&z=15&output=embed" title="Mahanama College location" style="border:0; width:100%; height:100%; display:block; background:#ddd;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </a>
+                </div>
+                <!-- map end -->
+
+                <!-- footer -->
+                <footer class="mil-dark-bg">
+                    <div class="mi-invert-fix">
+                        <div class="container mil-p-120-60">
+                            <div class="row justify-content-between">
+                                <div class="col-md-4 col-lg-4 mil-mb-60">
+
+                                    <div class="mil-muted mil-logo mil-up mil-mb-30"><img src="Pics/chayamana logo.png" alt="CHAYAMANA logo" style="width: 100px;"></div>
+
+                                    <p class="mil-light-soft mil-up mil-mb-30">CHAYAMANA – the annual photographic exhibition and competition by MCPAS, Mahanama College Photographic Art Society.</p>
+
+                                </div>
+                                <div class="col-md-7 col-lg-6">
+                                    <div class="row justify-content-end">
+                                        <div class="col-md-6 col-lg-7">
+
+                                            <nav class="mil-footer-menu mil-mb-60">
+                                                <ul>
+                                                    <li class="mil-up mil-active">
+                                                        <a href="index.html">Home</a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a href="portfolio-1.html">Gallery<br><br></a>
+                                                    </li>
+                                                    <li class="mil-up">
+                                                        <a data-no-swup href="Chayamana_2026-Rules_and_Regulations_compressed%20copy.pdf" target="_blank" rel="noopener">Rules &amp; Regulations</a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5">
+
+                                            <ul class="mil-menu-list mil-up mil-mb-60">
+                                                <li><a href="physical-competition.html" data-no-swup class="mil-light-soft">Physical Competition</a></li>
+                                                <li><a herf="invitation.html"</li>
+                                                <li><a href="https://www.instagram.com/mcpas.official/" target="_blank" rel="noopener" data-no-swup class="mil-light-soft">Instagram</a></li>
+                                            </ul>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-between flex-sm-row-reverse">
+                                <div class="col-md-7 col-lg-6">
+
+                                    <div class="row justify-content-between">
+
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Chamathka Sadaru</h6><br>
+
+                                            <p class="mil-light-soft mil-up"> Project Chair-person <a class="mil-no-wrap" href="tel:+94778400503">0778400503</a></p>
+
+                                        </div>
+                                        <div class="col-md-6 col-lg-5 mil-mb-60">
+
+                                            <h6 class="mil-muted mil-up mil-mb-30">Pavan Bandara</h6><br>
+
+                                            <p class="mil-light-soft mil-up"> Project Chair-person <a class="mil-no-wrap" href="tel:+94706088879">0706088879</a></p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+    
+                                <div class="col-md-4 col-lg-6 mil-mb-60">
+
+                                    <div class="mil-vert-between">
+                                        <div class="mil-mb-30">
+                                            <ul class="mil-social-icons mil-up">
+                                                <li><a href="https://www.instagram.com/mcpas.official/" target="_blank" rel="noopener" data-no-swup class="social-icon" aria-label="MCPAS on Instagram"> <i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <p class="mil-light-soft mil-up">© 2026 MCPAS – Mahanama College Photographic Art Society. All rights reserved.</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- footer end -->
+
+                <!-- hidden elements -->
+                <div class="mil-hidden-elements">
+                    <div class="mil-dodecahedron">
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="mil-pentagon"><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mil-arrow">
+                        <path d="M 14 5.3417969 C 13.744125 5.3417969 13.487969 5.4412187 13.292969 5.6367188 L 13.207031 5.7226562 C 12.816031 6.1136563 12.816031 6.7467188 13.207031 7.1367188 L 17.070312 11 L 4 11 C 3.448 11 3 11.448 3 12 C 3 12.552 3.448 13 4 13 L 17.070312 13 L 13.207031 16.863281 C 12.816031 17.254281 12.816031 17.887344 13.207031 18.277344 L 13.292969 18.363281 C 13.683969 18.754281 14.317031 18.754281 14.707031 18.363281 L 20.363281 12.707031 C 20.754281 12.316031 20.754281 11.682969 20.363281 11.292969 L 14.707031 5.6367188 C 14.511531 5.4412187 14.255875 5.3417969 14 5.3417969 z" />
+                    </svg>
+
+                    <svg width="250" viewBox="0 0 300 1404" fill="none" xmlns="http://www.w3.org/2000/svg" class="mil-lines">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M300 1175H0V1174H300V1175Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z" class="mil-move" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z" class="mil-move" />
+                    </svg>
+                </div>
+                <!-- hidden elements end -->
+
+            </div>
+        </div>
+        <!-- content -->
     </div>
-  </section>
+    <!-- wrapper end -->
 
-  <!-- ===== 3. INVITATION MESSAGE ===== -->
-  <section class="message">
-    <svg class="spin up d4" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#E2C267" stroke-width="1.5" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="7"/><path d="M20 3 L27 13M35 12 L27 20M35 28 L23 26M20 37 L13 27M5 28 L13 20M5 12 L17 14"/></svg>
-    <p class="up d5 message-text">We are delighted to invite you to an evening of light, shadow and storytelling — a celebration of the finest work by the young photographers of Mahanama College.</p>
-    <p class="up d5 signature">[Name], President – MCPAS</p>
-  </section>
+    <!-- jQuery js -->
+    <script src="js/plugins/jquery.min.js"></script>
+    <!-- swup js -->
+    <script src="js/plugins/swup.min.js"></script>
+    <!-- swiper js -->
+    <script src="js/plugins/swiper.min.js"></script>
+    <!-- fancybox js -->
+    <script src="js/plugins/fancybox.min.js"></script>
+    <!-- gsap js -->
+    <script src="js/plugins/gsap.min.js"></script>
+    <!-- smooth-scroll.js removed: it hijacked wheel scrolling and fought with ScrollTrigger -->
+    <!-- scroll trigger js -->
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <!-- scroll to js -->
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <!-- ashley js -->
+    <script src="js/main.js"></script>
 
-  <!-- ===== 4. EVENT DETAILS ===== -->
-  <section class="details">
-    <div class="card up d6">
-      <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-      <span class="label">Date</span>
-      <span class="value">[Saturday, DD Month 2026]</span>
-    </div>
-    <div class="card up d6">
-      <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-      <span class="label">Time</span>
-      <span class="value">[9.00 a.m. onwards]</span>
-    </div>
-    <div class="card up d7">
-      <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-      <span class="label">Venue</span>
-      <span class="value">[Hall name], Mahanama College</span>
-    </div>
-    <div class="card up d7">
-      <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>
-      <span class="label">Chief Guest</span>
-      <span class="value">[Chief guest name]</span>
-    </div>
-  </section>
+    <!-- auto-slide reviews -->
+    <script>
+    window.addEventListener('load', function () {
+        var attempts = 0;
+        var checkSlider = setInterval(function () {
+            var reviewSlider = document.querySelector('.mil-reviews-slider');
+            attempts++;
 
-  <!-- ===== 5. FILMSTRIP GALLERY ===== -->
-  <section class="gallery up d8">
-    <p class="section-label">A glimpse of the exhibition</p>
-    <div class="filmstrip">
-      <div class="film" id="film">
-        <!-- Put your photos in the images folder: photo1.jpg ... photo6.jpg -->
-        <div class="frame" style="background-image:url('images/photo1.jpg')"></div>
-        <div class="frame" style="background-image:url('images/photo2.jpg')"></div>
-        <div class="frame" style="background-image:url('images/photo3.jpg')"></div>
-        <div class="frame" style="background-image:url('images/photo4.jpg')"></div>
-        <div class="frame" style="background-image:url('images/photo5.jpg')"></div>
-        <div class="frame" style="background-image:url('images/photo6.jpg')"></div>
-      </div>
-    </div>
-  </section>
+            if (reviewSlider && reviewSlider.swiper) {
+                reviewSlider.swiper.params.autoplay = {
+                    delay: 3000,
+                    disableOnInteraction: false
+                };
+                reviewSlider.swiper.autoplay.start();
+                clearInterval(checkSlider);
+            }
 
-  <!-- ===== 6. COUNTDOWN ===== -->
-  <section class="countdown up d8">
-    <p class="section-label">The shutter opens in</p>
-    <div class="count-grid">
-      <div class="count-box"><span class="num" id="days">00</span><span class="unit">Days</span></div>
-      <div class="count-box"><span class="num" id="hours">00</span><span class="unit">Hours</span></div>
-      <div class="count-box"><span class="num" id="mins">00</span><span class="unit">Mins</span></div>
-      <div class="count-box"><span class="num" id="secs">00</span><span class="unit">Secs</span></div>
-    </div>
-  </section>
+            if (attempts > 20) {
+                clearInterval(checkSlider);
+            }
+        }, 500);
+    });
+    </script>
 
-  <!-- ===== 7. BUTTONS ===== -->
-  <section class="actions up d9">
-    <a class="btn-main pulse" href="https://mcpas.mcmu.lk/" target="_blank" rel="noopener">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#141210" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
-      Visit Our Website
-    </a>
-    <div class="btn-row">
-      <a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Mahanama+College+Colombo" target="_blank" rel="noopener">Get Directions</a>
-      <!-- Replace 94XXXXXXXXX with your WhatsApp number (94 + number without the first 0) -->
-      <a class="btn-ghost" href="https://wa.me/94XXXXXXXXX?text=I%20will%20attend%20CHAYAMANA%202026" target="_blank" rel="noopener">RSVP on WhatsApp</a>
-    </div>
-  </section>
+    <!-- photo slideshow script: cycles images every 5 seconds -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slides = document.querySelectorAll('.mil-photo-slideshow .mil-slide-img');
+        let current = 0;
 
-  <!-- ===== 8. FOOTER ===== -->
-  <footer class="footer">
-    <p>Inquiries: [Contact name] · [07X XXX XXXX]</p>
-    <p class="small">Organised by the Mahanama College Photographic Art Society · <a href="https://mcpas.mcmu.lk/" target="_blank" rel="noopener">mcpas.mcmu.lk</a></p>
-    <button class="replay" id="replayBtn">Replay opening</button>
-  </footer>
+        if (slides.length > 1) {
+            setInterval(function () {
+                slides[current].classList.remove('mil-slide-active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('mil-slide-active');
+            }, 5000);
+        }
+    });
+    </script>
 
-</main>
-<script>
-// ===== CHAYAMANA 2026 e-invitation – script =====
+    <!-- "days to go" on the Next shoot chip -->
+    <script>
+    (function () {
+        function hpDays() {
+            var el = document.getElementById('hp-days');
+            if (!el) return;
+            var d = Math.ceil((new Date(2026, 11, 5) - new Date()) / 86400000);
+            el.textContent = d > 1 ? d + ' days to go' : d === 1 ? 'Tomorrow' : d === 0 ? 'Today' : 'Concluded';
+        }
+        document.addEventListener('DOMContentLoaded', hpDays);
+        document.addEventListener('swup:contentReplaced', hpDays);
+    })();
+    </script>
 
-// 1) EVENT DATE for the countdown (Sri Lanka time, +05:30). Change this.
-const EVENT_DATE = new Date('2026-12-19T09:00:00+05:30');
+    <!-- camera flash + "photo captured" animation at the end of the preloader -->
+    <script>
+    (function () {
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        var started = false;
 
-const page = document.getElementById('page');
-const envelope = document.getElementById('envelope');
-const openBtn = document.getElementById('openBtn');
-const replayBtn = document.getElementById('replayBtn');
+        // "developing photo" effect for the hero text
+        var css = document.createElement('style');
+        css.textContent =
+            '@keyframes hp-develop{0%{filter:brightness(2.4) contrast(.55) blur(8px)}60%{filter:brightness(1.25) contrast(.9) blur(1.5px)}100%{filter:none}}' +
+            '.hp-developing .mil-banner .mil-banner-content{animation:hp-develop 1.8s cubic-bezier(.2,.6,.3,1) both}';
+        document.head.appendChild(css);
 
-// 2) Open the envelope
-function openInvitation() {
-  envelope.classList.add('open');
-  page.classList.add('go');
-  document.body.style.overflow = '';
-}
+        function flash(pre) {
+            if (started) return;
+            started = true;
 
-// Lock scrolling until the envelope is opened
-document.body.style.overflow = 'hidden';
-openBtn.addEventListener('click', openInvitation);
+            // white flash layer
+            var f = document.createElement('div');
+            f.setAttribute('aria-hidden', 'true');
+            f.style.cssText = 'position:fixed;inset:0;z-index:100001;pointer-events:none;opacity:0;' +
+                'background:radial-gradient(circle at 50% 45%,#fff 0%,#fff 45%,#fff6e6 100%);';
+            document.body.appendChild(f);
+            function set(op, ms, ease) {
+                f.style.transition = ms ? 'opacity ' + ms + 'ms ' + (ease || 'linear') : 'none';
+                f.style.opacity = op;
+            }
 
-// 3) Replay the opening animation
-replayBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0 });
-  envelope.classList.remove('open');
-  page.classList.remove('go');
-  void envelope.offsetWidth; // restart CSS animations
-  document.body.style.overflow = 'hidden';
-});
+            // pre-flash
+            set(0.55, 0);
+            setTimeout(function () { set(0, 90); }, 50);
 
-// 4) Filmstrip: duplicate the photos so the loop is seamless
-const film = document.getElementById('film');
-film.innerHTML += film.innerHTML;
+            // main flash + capture
+            setTimeout(function () {
+                set(1, 0);
 
-// 5) Countdown timer
-const els = {
-  days: document.getElementById('days'),
-  hours: document.getElementById('hours'),
-  mins: document.getElementById('mins'),
-  secs: document.getElementById('secs')
-};
-const pad = (n) => String(n).padStart(2, '0');
+                // the "captured photo": a copy of the loading screen
+                var snap = document.createElement('div');
+                snap.setAttribute('aria-hidden', 'true');
+                snap.style.cssText = 'position:fixed;inset:0;z-index:100000;pointer-events:none;background:#fff;' +
+                    'box-shadow:0 30px 80px rgba(0,0,0,.55);transform-origin:50% 50%;';
+                var img = document.createElement('div');
+                img.style.cssText = 'width:100%;height:100%;display:flex;align-items:center;justify-content:center;' +
+                    'background-color:#000;background-size:cover;background-position:center;';
+                img.style.backgroundImage = (pre && pre.style.backgroundImage) || 'none';
+                var logo = document.createElement('img');
+                logo.src = 'Pics/chayamana logo.png';
+                logo.alt = '';
+                logo.style.cssText = 'width:min(500px,70vw);height:auto;';
+                img.appendChild(logo);
+                snap.appendChild(img);
+                document.body.appendChild(snap);
+                if (pre) pre.style.visibility = 'hidden';
 
-function setNum(el, value) {
-  if (el.textContent !== value) {
-    el.textContent = value;
-    el.classList.remove('tick');
-    void el.offsetWidth;
-    el.classList.add('tick');
-  }
-}
+                setTimeout(function () {
+                    // flash fades, hero develops, photo shrinks into a print
+                    set(0, 900, 'cubic-bezier(.2,.6,.3,1)');
+                    document.body.classList.add('hp-developing');
 
-function updateCountdown() {
-  let ms = Math.max(0, EVENT_DATE - new Date());
-  const d = Math.floor(ms / 86400000); ms -= d * 86400000;
-  const h = Math.floor(ms / 3600000);  ms -= h * 3600000;
-  const m = Math.floor(ms / 60000);    ms -= m * 60000;
-  const s = Math.floor(ms / 1000);
-  setNum(els.days, pad(d));
-  setNum(els.hours, pad(h));
-  setNum(els.mins, pad(m));
-  setNum(els.secs, pad(s));
-}
-updateCountdown();
-setInterval(updateCountdown, 1000);
+                    var small = window.innerWidth < 700;
+                    var shrink = snap.animate([
+                        { transform: 'translate(0,0) scale(1) rotate(0deg)', padding: '0px', borderRadius: '0px' },
+                        { transform: (small ? 'translate(22vw,30vh) scale(.36)' : 'translate(33vw,30vh) scale(.24)') + ' rotate(-7deg)',
+                          padding: small ? '22px 22px 80px' : '36px 36px 130px', borderRadius: '6px' }
+                    ], { duration: 950, easing: 'cubic-bezier(.65,0,.25,1)', fill: 'forwards' });
 
-</script>
+                    shrink.onfinish = function () {
+                        setTimeout(function () {
+                            var out = snap.animate([
+                                { opacity: 1 },
+                                { transform: (small ? 'translate(22vw,85vh) scale(.36)' : 'translate(33vw,80vh) scale(.24)') + ' rotate(-14deg)', opacity: 0 }
+                            ], { duration: 650, easing: 'cubic-bezier(.5,0,.75,0)', fill: 'forwards' });
+                            out.onfinish = function () {
+                                snap.remove(); f.remove();
+                                setTimeout(function () { document.body.classList.remove('hp-developing'); }, 900);
+                            };
+                        }, 700);
+                    };
+                }, 120);
+            }, 260);
+        }
+
+        function watch() {
+            var pre = document.querySelector('.mil-preloader');
+            if (!pre) return;
+            var waited = 0;
+            var poll = setInterval(function () {
+                waited += 40;
+                var hidden = pre.classList.contains('mil-hidden');
+                var op = parseFloat(window.getComputedStyle(pre).opacity);
+                if (hidden || op < 0.97) {
+                    clearInterval(poll);
+                    if (!hidden) flash(pre);
+                }
+                if (waited > 15000) clearInterval(poll);
+            }, 40);
+        }
+
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', watch);
+        else watch();
+    })();
+    </script>
+
 </body>
+
 </html>

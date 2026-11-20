@@ -173,7 +173,7 @@ a:hover { color: #F3DC97; }
 }
 .eyebrow { margin: 0; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--soft); }
 .script { margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 24px; color: var(--gold); }
-.title-wrap { position: relative; overflow: hidden; padding: 4px 8px; }
+.title-wrap { position: relative; overflow: hidden; padding: 4px 8px; max-width: 100%; }
 h1 {
   margin: 0;
   font-family: 'Cormorant Garamond', serif;
@@ -309,6 +309,47 @@ h1 {
 @keyframes flash { 0%,92%,100% { opacity: 0; } 95% { opacity: .85; } }
 @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 @keyframes tick { from { transform: translateY(-6px); opacity: .3; } to { transform: none; opacity: 1; } }
+
+/* ---------- Laptop / desktop layout ---------- */
+@media (min-width: 768px) {
+  .page { max-width: none; }
+  .hero { height: 100vh; min-height: 620px; }
+  .hero-text { bottom: 12vh; gap: 18px; }
+  .eyebrow { font-size: 14px; letter-spacing: 6px; }
+  .script { font-size: 34px; }
+  h1 { font-size: clamp(72px, 9vw, 130px); letter-spacing: 14px; }
+  .subtitle { font-size: 18px; letter-spacing: 5px; }
+  .message { max-width: 780px; margin: 0 auto; padding: 48px 32px 72px; }
+  .message-text { font-size: 28px; }
+  .signature { font-size: 15px; }
+  .details { max-width: 1100px; margin: 0 auto; padding: 0 40px 72px; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .card { padding: 26px 22px; gap: 10px; }
+  .label { font-size: 12px; }
+  .value { font-size: 18px; }
+  .gallery { padding-bottom: 72px; gap: 22px; }
+  .section-label { font-size: 13px; }
+  .frame { width: 300px; height: 200px; }
+  .film { gap: 16px; }
+  .countdown { max-width: 680px; margin: 0 auto; padding-bottom: 72px; }
+  .count-grid { gap: 16px; }
+  .count-box { padding: 22px 8px; }
+  .num { font-size: 56px; }
+  .unit { font-size: 12px; }
+  .actions { max-width: 560px; margin: 0 auto; padding-bottom: 72px; }
+  .btn-main { min-height: 62px; font-size: 18px; }
+  .btn-ghost { min-height: 54px; font-size: 15px; }
+  .footer p { font-size: 15px; }
+  .footer .small { font-size: 13px; }
+  .env-btn { width: 440px; height: 296px; max-width: 90vw; }
+  .letter { height: 256px; padding-top: 40px; }
+  .letter-title { font-size: 42px; }
+  .letter-small, .letter-sub { font-size: 12px; }
+  .env-hint { font-size: 32px; }
+  .tap { font-size: 14px; }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .details { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+}
 
 /* Respect users who turn off motion */
 @media (prefers-reduced-motion: reduce) {

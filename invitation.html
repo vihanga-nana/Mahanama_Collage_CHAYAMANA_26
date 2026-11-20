@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CHAYAMANA 2026 – You're Invited | MCPAS</title>
-  <meta name="description" content="You are cordially invited to CHAYAMANA 2026, the photographic exhibition of the Mahanama College Photographic Art Society.">
+  <meta name="description" content="You are cordially invited to CHAYAMANA 2026, the inter-school photography competition of the Mahanama College Photographic Art Society.">
 
   <!-- Link preview for WhatsApp / Facebook (change the URLs after uploading) -->
   <meta property="og:title" content="You're Invited – CHAYAMANA 2026">
-  <meta property="og:description" content="Photographic Exhibition by the Mahanama College Photographic Art Society">
+  <meta property="og:description" content="Inter-school photography competition by the Mahanama College Photographic Art Society · Saturday, 5th December 2026">
   <meta property="og:image" content="https://mcpas.mcmu.lk/images/cover.jpg">
-  <meta property="og:url" content="https://mcpas.mcmu.lk/invitation.html">
+  <meta property="og:url" content="https://mcpas.mcmu.lk/invite/">
   <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,16 +33,18 @@
 
 * { box-sizing: border-box; }
 
-/* Disable text selection, highlighting and image dragging */
+/* ---------- Disable text selection / highlighting / image dragging ---------- */
 html, body, * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
   -webkit-tap-highlight-color: transparent;
 }
-img, svg { -webkit-user-drag: none; user-drag: none; pointer-events: none; }
+::selection { background: transparent; }
+::-moz-selection { background: transparent; }
+img, svg { -webkit-user-drag: none; }
 body {
   margin: 0;
   background: var(--bg);
@@ -221,6 +223,7 @@ h1 {
 .bob { animation: bounce 2.4s ease-in-out infinite; }
 .label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
 .value { font-size: 16px; font-weight: 600; color: var(--cream); }
+.details .card:nth-child(3):last-child { grid-column: 1 / -1; }
 
 /* ---------- 5. Gallery ---------- */
 .gallery { padding-bottom: 44px; display: flex; flex-direction: column; gap: 16px; }
@@ -333,7 +336,7 @@ h1 {
   .message { max-width: 780px; margin: 0 auto; padding: 48px 32px 72px; }
   .message-text { font-size: 28px; }
   .signature { font-size: 15px; }
-  .details { max-width: 1100px; margin: 0 auto; padding: 0 40px 72px; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .details { max-width: 960px; margin: 0 auto; padding: 0 40px 72px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .card { padding: 26px 22px; gap: 10px; }
   .label { font-size: 12px; }
   .value { font-size: 18px; }
@@ -358,6 +361,9 @@ h1 {
   .env-hint { font-size: 32px; }
   .tap { font-size: 14px; }
 }
+@media (min-width: 1001px) {
+  .details .card:nth-child(3):last-child { grid-column: auto; }
+}
 @media (min-width: 768px) and (max-width: 1000px) {
   .details { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
 }
@@ -380,7 +386,7 @@ h1 {
       <div class="letter">
         <span class="letter-small">You are invited</span>
         <span class="letter-title">CHAYAMANA</span>
-        <span class="letter-sub">Photographic Exhibition 2026</span>
+        <span class="letter-sub">Inter school photography competitions</span>
       </div>
       <div class="env-pocket"></div>
       <div class="flap"></div>
@@ -403,15 +409,15 @@ h1 {
         <h1>CHAYAMANA</h1>
         <div class="sweep"></div>
       </div>
-      <p class="up d4 subtitle">Inter School Photography Competitions</p>
+      <p class="up d4 subtitle">Inter school photography competitions</p>
     </div>
   </section>
 
   <!-- ===== 3. INVITATION MESSAGE ===== -->
   <section class="message">
     <svg class="spin up d4" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="#E2C267" stroke-width="1.5" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle cx="20" cy="20" r="7"/><path d="M20 3 L27 13M35 12 L27 20M35 28 L23 26M20 37 L13 27M5 28 L13 20M5 12 L17 14"/></svg>
-    <p class="up d5 message-text">We are delighted to invite you to an evening of light, shadow and storytelling — a celebration of the finest work by the young photographers of Mahanama College.</p>
-    <p class="up d5 signature">[Name], President – MCPAS</p>
+    <p class="up d5 message-text">We are delighted to invite your school to take part in Chayamana, an inter-school photography competition celebrating creativity, perspective, and the art of capturing the moment.</p>
+    <p class="up d5 signature">Virul Bonula, President – MCPAS</p>
   </section>
 
   <!-- ===== 4. EVENT DETAILS ===== -->
@@ -419,28 +425,23 @@ h1 {
     <div class="card up d6">
       <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
       <span class="label">Date</span>
-      <span class="value">[Saturday, DD Month 2026]</span>
+      <span class="value">Saturday, 5th December 2026</span>
     </div>
     <div class="card up d6">
       <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
       <span class="label">Time</span>
-      <span class="value">[9.00 a.m. onwards]</span>
+      <span class="value">9.00 a.m. onwards</span>
     </div>
     <div class="card up d7">
       <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
       <span class="label">Venue</span>
-      <span class="value">[Hall name], Mahanama College</span>
-    </div>
-    <div class="card up d7">
-      <svg class="bob" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E2C267" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>
-      <span class="label">Chief Guest</span>
-      <span class="value">[Chief guest name]</span>
+      <span class="value">Mahanama College premises</span>
     </div>
   </section>
 
   <!-- ===== 5. FILMSTRIP GALLERY ===== -->
   <section class="gallery up d8">
-    <p class="section-label">A glimpse of the exhibition</p>
+    <p class="section-label">A glimpse of the CHAYAMANA</p>
     <div class="filmstrip">
       <div class="film" id="film">
         <!-- Put your photos in the images folder: photo1.jpg ... photo6.jpg -->
@@ -473,34 +474,35 @@ h1 {
     </a>
     <div class="btn-row">
       <a class="btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Mahanama+College+Colombo" target="_blank" rel="noopener">Get Directions</a>
-      <!-- Replace 94XXXXXXXXX with your WhatsApp number (94 + number without the first 0) -->
-      <a class="btn-ghost" href="https://wa.me/94XXXXXXXXX?text=I%20will%20attend%20CHAYAMANA%202026" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+      <a class="btn-ghost" href="https://wa.me/94707503489?text=I%20will%20attend%20CHAYAMANA%202026" target="_blank" rel="noopener">RSVP on WhatsApp</a>
     </div>
   </section>
 
   <!-- ===== 8. FOOTER ===== -->
   <footer class="footer">
-    <p>Inquiries: [Contact name] · [07X XXX XXXX]</p>
+    <p>Inquiries: Virul Bonula · 070 750 3489</p>
     <p class="small">Organised by the Mahanama College Photographic Art Society · <a href="https://mcpas.mcmu.lk/" target="_blank" rel="noopener">mcpas.mcmu.lk</a></p>
     <button class="replay" id="replayBtn">Replay opening</button>
   </footer>
 
 </main>
 <script>
-// Block right-click, copy, select-all and dragging
+// ===== CHAYAMANA 2026 e-invitation – script =====
+
+// 0) Block right-click, copy, select-all, view-source and save shortcuts
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('selectstart', e => e.preventDefault());
 document.addEventListener('dragstart', e => e.preventDefault());
 document.addEventListener('copy', e => e.preventDefault());
+document.addEventListener('cut', e => e.preventDefault());
 document.addEventListener('keydown', e => {
-  if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'u', 's'].includes(e.key.toLowerCase())) {
+  if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'x', 'u', 's', 'p'].includes(e.key.toLowerCase())) {
     e.preventDefault();
   }
 });
-// ===== CHAYAMANA 2026 e-invitation – script =====
 
 // 1) EVENT DATE for the countdown (Sri Lanka time, +05:30). Change this.
-const EVENT_DATE = new Date('2026-12-19T09:00:00+05:30');
+const EVENT_DATE = new Date('2026-12-05T09:00:00+05:30');
 
 const page = document.getElementById('page');
 const envelope = document.getElementById('envelope');

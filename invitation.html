@@ -443,6 +443,43 @@ h1 {
 .cal-menu a:hover, .cal-menu button:hover { background: #222222; color: var(--gold); }
 .cal-done { margin: 0; font-size: 12px; color: var(--gold); min-height: 16px; text-align: center; }
 
+/* ---------- Like button (floating heart) ---------- */
+.like-btn {
+  position: fixed; right: 16px; bottom: calc(18px + env(safe-area-inset-bottom)); z-index: 45;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,.85); border: 1.5px solid var(--gold);
+  cursor: pointer; padding: 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,.5);
+  opacity: 0; transform: scale(.4); pointer-events: none;
+  transition: opacity .4s, transform .4s cubic-bezier(.3,1.6,.5,1), background .25s;
+}
+.page.go ~ .like-btn { opacity: 1; transform: scale(1); pointer-events: auto; transition-delay: 5s, 5s, 0s; }
+.like-btn svg { width: 26px; height: 26px; overflow: visible; }
+.like-btn .heart { fill: transparent; stroke: var(--gold); stroke-width: 1.8; transition: fill .2s; }
+.like-btn.liked { background: var(--gold); }
+.like-btn.liked .heart { fill: #000000; stroke: #000000; }
+.like-btn.pop svg { animation: heartPop .45s cubic-bezier(.3,1.8,.5,1); }
+@keyframes heartPop { 0% { transform: scale(.6); } 60% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.like-label {
+  position: fixed; right: 80px; bottom: calc(32px + env(safe-area-inset-bottom)); z-index: 45;
+  padding: 6px 12px; border-radius: 20px;
+  background: rgba(0,0,0,.85); border: 1px solid #333;
+  color: #FFFFFF; font: 500 12px Inter, sans-serif; white-space: nowrap;
+  opacity: 0; transform: translateX(8px); transition: opacity .3s, transform .3s; pointer-events: none;
+}
+.like-label.show { opacity: 1; transform: none; }
+.mini-heart {
+  position: fixed; z-index: 44; pointer-events: none;
+  width: 18px; height: 18px;
+  animation: floatUp 1.3s ease-out forwards;
+}
+@keyframes floatUp {
+  0% { opacity: 1; transform: translate(0,0) scale(.6) rotate(0); }
+  100% { opacity: 0; transform: translate(var(--dx), -150px) scale(1.2) rotate(var(--rot)); }
+}
+@media (min-width: 768px) { .like-btn { width: 62px; height: 62px; right: 24px; bottom: 24px; } .like-label { right: 96px; bottom: 42px; } }
+
 /* Personal greeting */
 .guest-name { margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 26px; color: var(--yellow-soft); }
 .guest-name:empty { display: none; }
@@ -593,6 +630,12 @@ h1 {
 
 </main>
 
+<!-- Like button -->
+<button class="like-btn" id="likeBtn" type="button" aria-pressed="false" aria-label="Like this invitation">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path class="heart" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" stroke-linejoin="round"/></svg>
+</button>
+<div class="like-label" id="likeLabel" aria-live="polite"></div>
+
 <script>
 // ===== CHAYAMANA 2026 e-invitation – script =====
 
@@ -671,6 +714,52 @@ function updateCountdown() {
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+// 8) Like button
+(function () {
+  const btn = document.getElementById('likeBtn');
+  const label = document.getElementById('likeLabel');
+  const KEY = 'chayamana-2026-liked';
+  let liked = false, labelTimer;
+  try { liked = localStorage.getItem(KEY) === '1'; } catch (e) {}
+  const show = (text) => {
+    label.textContent = text; label.classList.add('show');
+    clearTimeout(labelTimer); labelTimer = setTimeout(() => label.classList.remove('show'), 2200);
+  };
+  const render = () => {
+    btn.classList.toggle('liked', liked);
+    btn.setAttribute('aria-pressed', liked);
+    btn.setAttribute('aria-label', liked ? 'Unlike this invitation' : 'Like this invitation');
+  };
+  function burst() {
+    const r = btn.getBoundingClientRect();
+    const colours = ['#E9AF20', '#FFFFFF', '#F0C24A', '#D0CECF'];
+    for (let i = 0; i < 9; i++) {
+      const h = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      h.setAttribute('viewBox', '0 0 24 24'); h.setAttribute('class', 'mini-heart');
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', 'M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z');
+      path.setAttribute('fill', colours[i % colours.length]);
+      h.appendChild(path);
+      h.style.left = (r.left + r.width / 2 - 9) + 'px';
+      h.style.top = (r.top + r.height / 2 - 9) + 'px';
+      h.style.setProperty('--dx', (Math.random() * 120 - 60) + 'px');
+      h.style.setProperty('--rot', (Math.random() * 60 - 30) + 'deg');
+      h.style.animationDelay = (i * 0.06) + 's';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 1800);
+    }
+  }
+  render();
+  btn.addEventListener('click', () => {
+    liked = !liked;
+    try { liked ? localStorage.setItem(KEY, '1') : localStorage.removeItem(KEY); } catch (e) {}
+    render();
+    btn.classList.remove('pop'); void btn.offsetWidth; btn.classList.add('pop');
+    if (liked) { burst(); if (navigator.vibrate) navigator.vibrate(25); show('Thank you for the love!'); }
+    else show('Like removed');
+  });
+})();
 
 // 7) Add to Calendar
 (function () {

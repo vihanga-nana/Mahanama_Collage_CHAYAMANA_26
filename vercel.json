@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/invitation", "destination": "/invitation.html", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.ics",
+      "headers": [
+        { "key": "Content-Type", "value": "text/calendar; charset=utf-8" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"chayamana-2026.ics\"" }
+      ]
+    }
+  ]
+}

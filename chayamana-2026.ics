@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//MCPAS//Chayamana 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:chayamana-2026@mcpas.mcmu.lk
+DTSTAMP:20261120T040916Z
+DTSTART:20261205T033000Z
+DTEND:20261205T083000Z
+SUMMARY:CHAYAMANA 2026 – Inter School Photography Competition
+LOCATION:Mahanama College\, Colombo\, Sri Lanka
+DESCRIPTION:Organised by the Mahanama College Photographic Art Society.\nIn
+ vitation: https://mcpas.mcmu.lk/invitation.html\nWebsite: https://mcpas.mc
+ mu.lk/
+URL:https://mcpas.mcmu.lk/invitation.html
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:CHAYAMANA is tomorrow!
+END:VALARM
+END:VEVENT
+END:VCALENDAR
